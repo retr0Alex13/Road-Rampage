@@ -5,12 +5,12 @@ namespace CarControllerwithShooting
     public class NaturalAI : MonoBehaviour
     {
         public int Health = 100;
-        public bool isExplosive;
+        public bool IsExplosive;
         public bool destroyParentOnDeath;
         private bool isExploded = false;
         public Collider MainCollider;
 
-        public GameObject explosionEffect;
+        public GameObject ExplosionEffect;
         private GameObject particleParent;
 
         private void Start()
@@ -75,9 +75,9 @@ namespace CarControllerwithShooting
                 Destroy(rigidbody.gameObject, 10);
             }
 
-            if (isExplosive || explosionEffect != null)
+            if (IsExplosive || ExplosionEffect != null)
             {
-                Instantiate(explosionEffect, gameObject.transform.position, Quaternion.identity);
+                Instantiate(ExplosionEffect, gameObject.transform.position, Quaternion.identity);
             }
 
 
