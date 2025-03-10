@@ -13,8 +13,10 @@ namespace CarControllerwithShooting
         public GameObject EnemyMissile;
         public Transform Firing_Point;
         public Transform MissileLauncher;
+        public bool IsExplosive;
         private bool isExploded = false;
         public GameObject SpritePointer;
+        public GameObject ExplosionEffect;
         public Collider MainCollider;
 
         public Collider[] colliders;
@@ -130,6 +132,11 @@ namespace CarControllerwithShooting
                     rigidbody.AddExplosionForce(Random.Range(5, 20), rigidbody.transform.position, Random.Range(5, 15), Random.Range(2, 4), ForceMode.Impulse);
                     rigidbody.AddRelativeTorque(new Vector3(Random.Range(-5, 5), Random.Range(-5, 5), Random.Range(-5, 5)), ForceMode.Impulse);
                     Destroy(rigidbody.gameObject, 5);
+                }
+
+                if (IsExplosive || ExplosionEffect != null)
+                {
+                    Instantiate(ExplosionEffect, gameObject.transform.position, Quaternion.identity);
                 }
 
                 if (RadarSystem.Instance != null)
