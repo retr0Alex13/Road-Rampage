@@ -160,10 +160,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Health: 10
-  isExplosive: 1
+  IsExplosive: 1
   destroyParentOnDeath: 1
   MainCollider: {fileID: 4053248100801534462}
-  explosionEffect: {fileID: 100006, guid: 4d4c92b4b69c24666b95b710fa62cb24, type: 3}
+  ExplosionEffect: {fileID: 100006, guid: 4d4c92b4b69c24666b95b710fa62cb24, type: 3}
 --- !u!114 &5140062333893056712
 MonoBehaviour:
   m_ObjectHideFlags: 0
