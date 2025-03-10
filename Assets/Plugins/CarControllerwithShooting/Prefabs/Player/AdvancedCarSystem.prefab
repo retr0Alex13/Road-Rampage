@@ -172,10 +172,66 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 198737313120763428, guid: 0aca9bb2e5c9c4145bf0d89014822e93, type: 3}
+      propertyPath: AudioClip_Missile_Fire
+      value: 
+      objectReference: {fileID: 8300000, guid: 3e061ae887aa3e44c934fcfacf89a27d, type: 3}
+    - target: {fileID: 198737313120763428, guid: 0aca9bb2e5c9c4145bf0d89014822e93, type: 3}
+      propertyPath: AudioClip_Machinegun_Fire
+      value: 
+      objectReference: {fileID: 8300000, guid: 16c3aafb70af1cf469475f96e3798521, type: 3}
     - target: {fileID: 198737313120763438, guid: 0aca9bb2e5c9c4145bf0d89014822e93, type: 3}
       propertyPath: m_Name
       value: Car
       objectReference: {fileID: 0}
+    - target: {fileID: 198737313120763439, guid: 0aca9bb2e5c9c4145bf0d89014822e93, type: 3}
+      propertyPath: lowAccelClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 9437eb327ac702a44992d723d61c716e, type: 3}
+    - target: {fileID: 198737313120763439, guid: 0aca9bb2e5c9c4145bf0d89014822e93, type: 3}
+      propertyPath: lowDecelClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 9abc3ab89c6faca4c90dd4decb07f91e, type: 3}
+    - target: {fileID: 198737313120763439, guid: 0aca9bb2e5c9c4145bf0d89014822e93, type: 3}
+      propertyPath: highAccelClip
+      value: 
+      objectReference: {fileID: 8300000, guid: de0f62f5bb1348e4ab69be13a754f16f, type: 3}
+    - target: {fileID: 198737313120763439, guid: 0aca9bb2e5c9c4145bf0d89014822e93, type: 3}
+      propertyPath: highDecelClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 6f5312a85f2fb03498df2ebf559d0479, type: 3}
+    - target: {fileID: 416458844463807708, guid: 0aca9bb2e5c9c4145bf0d89014822e93, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: d45378b7603224a42bd3b8665c680dcb, type: 3}
+    - target: {fileID: 416458844463807708, guid: 0aca9bb2e5c9c4145bf0d89014822e93, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: d45378b7603224a42bd3b8665c680dcb, type: 3}
+    - target: {fileID: 3317912017012323204, guid: 0aca9bb2e5c9c4145bf0d89014822e93, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: d45378b7603224a42bd3b8665c680dcb, type: 3}
+    - target: {fileID: 3317912017012323204, guid: 0aca9bb2e5c9c4145bf0d89014822e93, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: d45378b7603224a42bd3b8665c680dcb, type: 3}
+    - target: {fileID: 3508787372498382265, guid: 0aca9bb2e5c9c4145bf0d89014822e93, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: d45378b7603224a42bd3b8665c680dcb, type: 3}
+    - target: {fileID: 3508787372498382265, guid: 0aca9bb2e5c9c4145bf0d89014822e93, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: d45378b7603224a42bd3b8665c680dcb, type: 3}
+    - target: {fileID: 3583367484584085272, guid: 0aca9bb2e5c9c4145bf0d89014822e93, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: d45378b7603224a42bd3b8665c680dcb, type: 3}
+    - target: {fileID: 3583367484584085272, guid: 0aca9bb2e5c9c4145bf0d89014822e93, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: d45378b7603224a42bd3b8665c680dcb, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
