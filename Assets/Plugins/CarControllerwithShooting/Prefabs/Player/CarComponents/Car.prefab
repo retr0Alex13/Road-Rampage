@@ -84,14 +84,14 @@ MonoBehaviour:
   Bullet_Machinegun: {fileID: 2051454677145587, guid: 2ed4a03efb2ee4da28397b18044bea49, type: 3}
   FiringPoint_Machinegun: {fileID: 5382874488405718540}
   Machinegun_Firing_Interval: 0.1
-  AudioClip_Machinegun_Fire: {fileID: 8300000, guid: 29024bb9ce3654a8a89849ead7d47263, type: 3}
+  AudioClip_Machinegun_Fire: {fileID: 8300000, guid: 16c3aafb70af1cf469475f96e3798521, type: 3}
   Anim_MachineGun: {fileID: 4610736569860934128}
   Bullet_Missile: {fileID: 7554301599605368831, guid: 6ca652f0e1c5b44a79fa63491ec83bdb, type: 3}
   FiringPoints_Missiles:
   - {fileID: 7290116611417795195}
   - {fileID: 7290116609732699544}
   Missile_Firing_Interval: 0.5
-  AudioClip_Missile_Fire: {fileID: 8300000, guid: b4740dc31ae2b418d9192a595b6215d3, type: 3}
+  AudioClip_Missile_Fire: {fileID: 8300000, guid: 3e061ae887aa3e44c934fcfacf89a27d, type: 3}
   Particle_Missile_Firing_Explosion:
   - {fileID: 7290116611431952187}
   - {fileID: 7290116609751048408}
@@ -115,7 +115,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FuelCapacity: 100
   CurrentFuel: 100
-  FuelConsumptionRate: 0.001
+  FuelConsumptionRate: 0.005
   audioSource_Gasoline: {fileID: 6347010710521644028}
 --- !u!82 &6347010710521644028
 AudioSource:
@@ -259,6 +259,7 @@ MonoBehaviour:
   _downForce: 0
   _steerHelper: 0
   _tractionControl: 0
+  _slowdownRate: 5
   crushingParticle: {fileID: 100002, guid: 22c1a8db9fb314a978f8fc8e6e2e4ee8, type: 3}
   handBrake: 0
   speed: 0
@@ -287,10 +288,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   engineSoundStyle: 1
-  lowAccelClip: {fileID: 8300000, guid: 87d60897fb82b426ba95d3613471b292, type: 3}
-  lowDecelClip: {fileID: 8300000, guid: bcb5d0a0f9b39460fa97282d8ecc153b, type: 3}
-  highAccelClip: {fileID: 8300000, guid: f6ad4aae206ca442bb05f316cb046eda, type: 3}
-  highDecelClip: {fileID: 8300000, guid: 87d60897fb82b426ba95d3613471b292, type: 3}
+  lowAccelClip: {fileID: 8300000, guid: 9437eb327ac702a44992d723d61c716e, type: 3}
+  lowDecelClip: {fileID: 8300000, guid: 9abc3ab89c6faca4c90dd4decb07f91e, type: 3}
+  highAccelClip: {fileID: 8300000, guid: de0f62f5bb1348e4ab69be13a754f16f, type: 3}
+  highDecelClip: {fileID: 8300000, guid: 6f5312a85f2fb03498df2ebf559d0479, type: 3}
   pitchMultiplier: 0.41
   _lowPitchMin: 1
   _lowPitchMax: 6
@@ -614,8 +615,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: d12faaebc24e44ec18a626a50a47ac48, type: 3}
-  m_Resource: {fileID: 8300000, guid: d12faaebc24e44ec18a626a50a47ac48, type: 3}
+  m_audioClip: {fileID: 8300000, guid: d45378b7603224a42bd3b8665c680dcb, type: 3}
+  m_Resource: {fileID: 8300000, guid: d45378b7603224a42bd3b8665c680dcb, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -3291,8 +3292,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: d12faaebc24e44ec18a626a50a47ac48, type: 3}
-  m_Resource: {fileID: 8300000, guid: d12faaebc24e44ec18a626a50a47ac48, type: 3}
+  m_audioClip: {fileID: 8300000, guid: d45378b7603224a42bd3b8665c680dcb, type: 3}
+  m_Resource: {fileID: 8300000, guid: d45378b7603224a42bd3b8665c680dcb, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -3476,8 +3477,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: d12faaebc24e44ec18a626a50a47ac48, type: 3}
-  m_Resource: {fileID: 8300000, guid: d12faaebc24e44ec18a626a50a47ac48, type: 3}
+  m_audioClip: {fileID: 8300000, guid: d45378b7603224a42bd3b8665c680dcb, type: 3}
+  m_Resource: {fileID: 8300000, guid: d45378b7603224a42bd3b8665c680dcb, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -3661,8 +3662,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: d12faaebc24e44ec18a626a50a47ac48, type: 3}
-  m_Resource: {fileID: 8300000, guid: d12faaebc24e44ec18a626a50a47ac48, type: 3}
+  m_audioClip: {fileID: 8300000, guid: d45378b7603224a42bd3b8665c680dcb, type: 3}
+  m_Resource: {fileID: 8300000, guid: d45378b7603224a42bd3b8665c680dcb, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
