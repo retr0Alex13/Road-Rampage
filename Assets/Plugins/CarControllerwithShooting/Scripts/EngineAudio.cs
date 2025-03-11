@@ -50,11 +50,43 @@ namespace CarControllerwithShooting
 
         private void StopSound()
         {
+            if (_highAccel != null)
+                _highAccel.Stop();
+
+            if (engineSoundStyle == EngineAudioOptions.FourChannel)
+            {
+                if (_lowAccel != null)
+                    _lowAccel.Stop();
+                if (_lowDecel != null)
+                    _lowDecel.Stop();
+                if (_highDecel != null)
+                    _highDecel.Stop();
+            }
+
             _soundStarted = false;
         }
 
         private void Update()
         {
+            if (Gasoline.Instance != null && Gasoline.Instance.CurrentFuel <= 0)
+            {
+                // Gradually fade out engine sounds if they're playing
+                if (_soundStarted)
+                {
+                    FadeOutEngineSounds();
+
+                    // If sounds have completely faded out, stop them
+                    if (_highAccel.volume <= 0 &&
+                        (_lowAccel == null || _lowAccel.volume <= 0) &&
+                        (_lowDecel == null || _lowDecel.volume <= 0) &&
+                        (_highDecel == null || _highDecel.volume <= 0))
+                    {
+                        StopSound();
+                    }
+                }
+                return;
+            }
+
             if (!_soundStarted)
                 StartSound();
 
@@ -97,6 +129,24 @@ namespace CarControllerwithShooting
                     _highDecel.dopplerLevel = _useDoppler ? _dopplerLevel : 0;
                     _lowDecel.dopplerLevel = _useDoppler ? _dopplerLevel : 0;
                 }
+            }
+        }
+
+        private void FadeOutEngineSounds()
+        {
+            float fadeSpeed = 1.5f * Time.deltaTime; // Adjust speed as needed
+
+            if (_highAccel != null)
+                _highAccel.volume = Mathf.Max(0, _highAccel.volume - fadeSpeed);
+
+            if (engineSoundStyle == EngineAudioOptions.FourChannel)
+            {
+                if (_lowAccel != null)
+                    _lowAccel.volume = Mathf.Max(0, _lowAccel.volume - fadeSpeed);
+                if (_lowDecel != null)
+                    _lowDecel.volume = Mathf.Max(0, _lowDecel.volume - fadeSpeed);
+                if (_highDecel != null)
+                    _highDecel.volume = Mathf.Max(0, _highDecel.volume - fadeSpeed);
             }
         }
 

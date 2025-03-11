@@ -35,6 +35,10 @@ namespace CarControllerwithShooting
         [SerializeField, Range(0, 1)] private float _steerHelper;
         [SerializeField, Range(0, 1)] private float _tractionControl;
 
+        // New variables for handling no gasoline scenario
+        [SerializeField] private float _slowdownRate = 5f;
+        private bool _isOutOfGas = false;
+        private float _slowdownFactor = 1f;
 
         private Quaternion[] _wheelMeshLocalRotations;
         private float _steerAngle;
@@ -110,7 +114,7 @@ namespace CarControllerwithShooting
 
         private void OnCollisionEnter(Collision collision)
         {
-            if(collision.collider.CompareTag("Collapsable"))
+            if (collision.collider.CompareTag("Collapsable"))
             {
                 Rigidbody rigidbody = collision.collider.GetComponent<Rigidbody>();
                 if (rigidbody != null && rigidbody.isKinematic)
@@ -170,8 +174,26 @@ namespace CarControllerwithShooting
         [HideInInspector]
         public float handBrake;
 
+        // Check gasoline level and handle out of gas condition
+        private void Update()
+        {
+            // Check if we've just run out of gas
+            if (!_isOutOfGas && Gasoline.Instance.CurrentFuel <= 0)
+            {
+                _isOutOfGas = true;
+                //GameCanvas.Instance.Show_OutOfGasMessage();
+            }
+        }
+
         public void Move()
         {
+            // Check for gasoline level
+            if (_isOutOfGas)
+            {
+                HandleOutOfGas();
+                return;
+            }
+
             if (CarSystemManager.Instance.controllerType == ControllerType.KeyboardMouse)
             {
                 input = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
@@ -183,7 +205,7 @@ namespace CarControllerwithShooting
                 input = new Vector2(SimpleJoystick.Instance.HorizontalValue, SimpleJoystick.Instance.VerticalValue);
                 footBrake = SimpleJoystick.Instance.VerticalValue;
             }
-            
+
             _currentInputVector = Vector2.SmoothDamp(_currentInputVector, input, ref _smoothInputVelocity, _smoothInputSpeed);
             float accel = _currentInputVector.y;
             float steering = _currentInputVector.x;
@@ -229,6 +251,49 @@ namespace CarControllerwithShooting
             SetSteerAngle();
         }
 
+        // New method to handle out of gas scenario
+        private void HandleOutOfGas()
+        {
+            // Apply gradual slowdown
+            if (CurrentSpeed > 0.5f)
+            {
+                // Gradually reduce speed
+                _slowdownFactor = Mathf.Clamp01(_slowdownFactor - Time.deltaTime / _slowdownRate);
+
+                // Apply gentle braking to all wheels
+                float slowBrakeTorque = _brakeTorque * 0.3f;
+                for (int i = 0; i < 4; i++)
+                {
+                    wheelColliders[i].motorTorque = 0;
+                    wheelColliders[i].brakeTorque = slowBrakeTorque;
+                }
+
+                TurnBrakeLightsOn();
+            }
+            else
+            {
+                // When nearly stopped, apply full brakes to prevent rolling
+                for (int i = 0; i < 4; i++)
+                {
+                    wheelColliders[i].motorTorque = 0;
+                    wheelColliders[i].brakeTorque = _brakeTorque;
+                }
+
+                // Light handling for completely stopped vehicle
+                TurnBrakeLightsOff();
+            }
+
+            // Still update wheel visuals
+            for (int i = 0; i < 4; i++)
+            {
+                wheelColliders[i].GetWorldPose(out Vector3 position, out Quaternion quat);
+                _wheelMeshes[i].transform.SetPositionAndRotation(position, quat);
+            }
+
+            // Update speed display
+            GameCanvas.Instance.Update_Text_Speed();
+        }
+
         public float speed;
         private void CapSpeed()
         {
@@ -244,11 +309,30 @@ namespace CarControllerwithShooting
         {
             float thrustTorque;
             thrustTorque = accel * (_currentTorque / 4f);
-            for (int i = 0; i < 4; i++)
+
+            // Check if there's enough gasoline to apply thrust
+            if (Gasoline.Instance.CurrentFuel > 0)
             {
-                wheelColliders[i].motorTorque = thrustTorque;
+                for (int i = 0; i < 4; i++)
+                {
+                    wheelColliders[i].motorTorque = thrustTorque;
+                }
+                // Consume fuel based on thrust
+                Gasoline.Instance.CurrentFuel = Gasoline.Instance.CurrentFuel - thrustTorque * Time.deltaTime * Gasoline.Instance.FuelConsumptionRate;
+                // Ensure fuel doesn't go below zero
+                if (Gasoline.Instance.CurrentFuel < 0)
+                {
+                    Gasoline.Instance.CurrentFuel = 0;
+                }
             }
-            Gasoline.Instance.CurrentFuel = Gasoline.Instance.CurrentFuel - thrustTorque * Time.deltaTime * Gasoline.Instance.FuelConsumptionRate;
+            else
+            {
+                // No gasoline left, no thrust applied
+                for (int i = 0; i < 4; i++)
+                {
+                    wheelColliders[i].motorTorque = 0;
+                }
+            }
 
             for (int i = 0; i < 4; i++)
             {
@@ -280,7 +364,6 @@ namespace CarControllerwithShooting
                 TurnBrakeLightsOff();
                 TurnReverseLightsOff();
             }
-
         }
 
         private void SteerHelper()
