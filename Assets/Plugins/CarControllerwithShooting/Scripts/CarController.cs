@@ -150,10 +150,15 @@ namespace CarControllerwithShooting
             {
                 Health = 0;
                 ExplodeCar();
-                GameCanvas.Instance.Show_GameOver();
-                GameCanvas.Instance.GasolineUI.SetActive(false);
+                ShowGameOverUI();
             }
             GameCanvas.Instance.Update_Text_Health();
+        }
+
+        private static void ShowGameOverUI()
+        {
+            GameCanvas.Instance.Show_GameOver();
+            GameCanvas.Instance.GasolineUI.SetActive(false);
         }
 
         void ExplodeCar()
@@ -281,6 +286,7 @@ namespace CarControllerwithShooting
 
                 // Light handling for completely stopped vehicle
                 TurnBrakeLightsOff();
+                ShowGameOverUI();
             }
 
             // Still update wheel visuals
