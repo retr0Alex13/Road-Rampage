@@ -30,6 +30,7 @@ namespace CarControllerwithShooting
         private AudioSource _highAccel;
         private AudioSource _highDecel;
         private bool _soundStarted;
+        private bool _stopEngineSound;
         private CarController _carController;
 
         private void StartSound()
@@ -70,20 +71,12 @@ namespace CarControllerwithShooting
         {
             if (Gasoline.Instance != null && Gasoline.Instance.CurrentFuel <= 0)
             {
-                // Gradually fade out engine sounds if they're playing
-                if (_soundStarted)
-                {
-                    FadeOutEngineSounds();
-
-                    // If sounds have completely faded out, stop them
-                    if (_highAccel.volume <= 0 &&
-                        (_lowAccel == null || _lowAccel.volume <= 0) &&
-                        (_lowDecel == null || _lowDecel.volume <= 0) &&
-                        (_highDecel == null || _highDecel.volume <= 0))
-                    {
-                        StopSound();
-                    }
-                }
+                StopEngineSounds();
+                return;
+            }
+            else if (_stopEngineSound)
+            {
+                StopEngineSounds();
                 return;
             }
 
@@ -130,6 +123,30 @@ namespace CarControllerwithShooting
                     _lowDecel.dopplerLevel = _useDoppler ? _dopplerLevel : 0;
                 }
             }
+        }
+
+        public void SetStopEngineSound(bool value)
+        {
+            _stopEngineSound = value;
+        }
+
+        private void StopEngineSounds()
+        {
+            // Gradually fade out engine sounds if they're playing
+            if (_soundStarted)
+            {
+                FadeOutEngineSounds();
+
+                // If sounds have completely faded out, stop them
+                if (_highAccel.volume <= 0 &&
+                    (_lowAccel == null || _lowAccel.volume <= 0) &&
+                    (_lowDecel == null || _lowDecel.volume <= 0) &&
+                    (_highDecel == null || _highDecel.volume <= 0))
+                {
+                    StopSound();
+                }
+            }
+            return;
         }
 
         private void FadeOutEngineSounds()

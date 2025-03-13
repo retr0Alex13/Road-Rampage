@@ -37,7 +37,7 @@ namespace CarControllerwithShooting
 
         // New variables for handling no gasoline scenario
         [SerializeField] private float _slowdownRate = 5f;
-        private bool _isOutOfGas = false;
+        private bool _stopCar = false;
         private float _slowdownFactor = 1f;
 
         private Quaternion[] _wheelMeshLocalRotations;
@@ -161,6 +161,12 @@ namespace CarControllerwithShooting
             GameCanvas.Instance.GasolineUI.SetActive(false);
         }
 
+        private static void ShowWinUI()
+        {
+            //GameCanvas.Instance.Show_Win();
+            //GameCanvas.Instance.GasolineUI.SetActive(false);
+        }
+
         void ExplodeCar()
         {
             if (CarSystemManager.Instance.cameraFPS.activeSelf)
@@ -183,19 +189,25 @@ namespace CarControllerwithShooting
         private void Update()
         {
             // Check if we've just run out of gas
-            if (!_isOutOfGas && Gasoline.Instance.CurrentFuel <= 0)
+            if (!_stopCar && Gasoline.Instance.CurrentFuel <= 0)
             {
-                _isOutOfGas = true;
+                _stopCar = true;
                 //GameCanvas.Instance.Show_OutOfGasMessage();
             }
         }
 
         public void Move()
         {
-            // Check for gasoline level
-            if (_isOutOfGas)
+            if (_stopCar && Gasoline.Instance.CurrentFuel <= 0)
             {
-                HandleOutOfGas();
+                StopCarSmoothly();
+                ShowGameOverUI();
+                return;
+            }
+            else if (_stopCar)
+            {
+                StopCarSmoothly();
+                ShowWinUI();
                 return;
             }
 
@@ -257,7 +269,7 @@ namespace CarControllerwithShooting
         }
 
         // New method to handle out of gas scenario
-        private void HandleOutOfGas()
+        private void StopCarSmoothly()
         {
             // Apply gradual slowdown
             if (CurrentSpeed > 0.5f)
@@ -286,7 +298,6 @@ namespace CarControllerwithShooting
 
                 // Light handling for completely stopped vehicle
                 TurnBrakeLightsOff();
-                ShowGameOverUI();
             }
 
             // Still update wheel visuals
@@ -540,6 +551,11 @@ namespace CarControllerwithShooting
             {
                 _currentMaxSteerAngle = Mathf.MoveTowards(_currentMaxSteerAngle, _maximumSteerAngle / 2f, 0.5f);
             }
+        }
+
+        public void SetCarStop(bool value)
+        {
+            _stopCar = value;
         }
     }
 }
