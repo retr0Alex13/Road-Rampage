@@ -176,6 +176,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Car
       objectReference: {fileID: 0}
+    - target: {fileID: 6347010711917910712, guid: 0aca9bb2e5c9c4145bf0d89014822e93, type: 3}
+      propertyPath: FuelConsumptionRate
+      value: 0.004
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
