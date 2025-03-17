@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Ricimi;
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -33,7 +34,6 @@ namespace CarControllerwithShooting
         public GameObject Panel_Win;
         public GameObject Button_Pause;
         public GameObject Panel_Settings;
-
 
         void Awake()
         {
