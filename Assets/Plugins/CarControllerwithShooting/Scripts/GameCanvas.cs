@@ -30,6 +30,7 @@ namespace CarControllerwithShooting
 
         public GameObject Panel_Pause;
         public GameObject Panel_GameOver;
+        public GameObject Panel_Win;
         public GameObject Button_Pause;
         public GameObject Panel_Settings;
 
@@ -105,6 +106,24 @@ namespace CarControllerwithShooting
             Time.timeScale = 0;
             Panel_GameOver.SetActive(true);
             if(CarSystemManager.Instance.controllerType == ControllerType.KeyboardMouse)
+            {
+                Cursor.lockState = CursorLockMode.Confined;
+                Cursor.visible = true;
+            }
+        }
+
+        public void Show_WinScreen()
+        {
+            StartCoroutine(ShowWinPanel());
+        }
+
+        IEnumerator ShowWinPanel()
+        {
+            yield return new WaitForSeconds(4);
+            Time.timeScale = 0;
+            Panel_Win.SetActive(true);
+            isPaused = true;
+            if (CarSystemManager.Instance.controllerType == ControllerType.KeyboardMouse)
             {
                 Cursor.lockState = CursorLockMode.Confined;
                 Cursor.visible = true;

@@ -163,8 +163,8 @@ namespace CarControllerwithShooting
 
         private static void ShowWinUI()
         {
-            //GameCanvas.Instance.Show_Win();
-            //GameCanvas.Instance.GasolineUI.SetActive(false);
+            GameCanvas.Instance.Show_WinScreen();
+            GameCanvas.Instance.GasolineUI.SetActive(false);
         }
 
         void ExplodeCar()
