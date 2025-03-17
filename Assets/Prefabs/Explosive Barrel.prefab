@@ -159,7 +159,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 785910dc873ae4bc0b372e31d48de0a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 10
+  Health: 2
   IsExplosive: 1
   destroyParentOnDeath: 1
   MainCollider: {fileID: 4053248100801534462}
