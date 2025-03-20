@@ -1,18 +1,21 @@
 using CarControllerwithShooting;
 using UnityEngine;
 
-public class FinishCrossed : MonoBehaviour
+namespace Voidwalker
 {
-    private void OnTriggerEnter(Collider other)
+    public class FinishCrossed : MonoBehaviour
     {
-        if (!other.CompareTag("Car")) return;
-
-        CarController car = other.GetComponentInChildren<CarController>();
-
-        if (car != null)
+        private void OnTriggerEnter(Collider other)
         {
-            car.SetCarStop(true);
-            car.GetComponent<EngineAudio>().SetStopEngineSound(true);
+            if (!other.CompareTag("Car")) return;
+
+            CarController car = other.GetComponentInChildren<CarController>();
+
+            if (car != null)
+            {
+                car.SetCarStop(true);
+                car.GetComponent<EngineAudio>().SetStopEngineSound(true);
+            }
         }
     }
 }
