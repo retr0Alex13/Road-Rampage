@@ -5,6 +5,8 @@ namespace Voidwalker
 {
     public class FinishCrossed : MonoBehaviour
     {
+        [SerializeField] private LevelManager _levelManager;
+
         private void OnTriggerEnter(Collider other)
         {
             if (!other.CompareTag("Car")) return;
@@ -15,6 +17,8 @@ namespace Voidwalker
             {
                 car.SetCarStop(true);
                 car.GetComponent<EngineAudio>().SetStopEngineSound(true);
+
+                _levelManager.UnlockNextLevel();
             }
         }
     }
