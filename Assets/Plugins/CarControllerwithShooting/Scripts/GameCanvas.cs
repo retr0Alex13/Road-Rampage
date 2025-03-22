@@ -246,5 +246,10 @@ namespace CarControllerwithShooting
         {
             isFiringUpdate = -1;
         }
+
+        private void OnDisable()
+        {
+            Time.timeScale = 1;
+        }
     }
 }
