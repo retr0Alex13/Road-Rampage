@@ -14077,6 +14077,10 @@ PrefabInstance:
       propertyPath: PauseButtons
       value: 
       objectReference: {fileID: 99177208}
+    - target: {fileID: 2267947301856911464, guid: 26681344a8cb84c7e8b473fbd5019dec, type: 3}
+      propertyPath: gameOverScreenDelay
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 2267947301856911469, guid: 26681344a8cb84c7e8b473fbd5019dec, type: 3}
       propertyPath: m_Name
       value: Canvas
