@@ -28,6 +28,8 @@ namespace CarControllerwithShooting
         public Text text_health;
         public Text text_speed;
         public bool isPaused = false;
+        public float gameOverScreenDelay = 5f;
+        public float winScreenDelay = 1f;
 
         public GameObject Panel_Pause;
         public GameObject Panel_GameOver;
@@ -102,7 +104,7 @@ namespace CarControllerwithShooting
 
         IEnumerator ShowGameOverPanel()
         {
-            yield return new WaitForSeconds(2);
+            yield return new WaitForSeconds(gameOverScreenDelay);
             Time.timeScale = 0;
             Panel_GameOver.SetActive(true);
             if(CarSystemManager.Instance.controllerType == ControllerType.KeyboardMouse)
@@ -119,7 +121,7 @@ namespace CarControllerwithShooting
 
         IEnumerator ShowWinPanel()
         {
-            yield return new WaitForSeconds(4);
+            yield return new WaitForSeconds(winScreenDelay);
             Time.timeScale = 0;
             Panel_Win.SetActive(true);
             isPaused = true;
