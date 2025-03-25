@@ -7,6 +7,9 @@ namespace Voidwalker
     {
         [SerializeField] private LevelManager _levelManager;
 
+        private const string LATEST_LEVEL = "LatestLevel";
+        private const string CURRENT_LEVEL = "Level";
+
         private void OnTriggerEnter(Collider other)
         {
             if (!other.CompareTag("Car")) return;
@@ -15,10 +18,27 @@ namespace Voidwalker
 
             if (car != null)
             {
-                car.SetCarStop(true);
-                car.GetComponent<EngineAudio>().SetStopEngineSound(true);
+                HandleCarFinished(car);
+            }
+        }
 
-                _levelManager.UnlockNextLevel();
+        private void HandleCarFinished(CarController car)
+        {
+            car.SetCarStop(true);
+            car.GetComponent<EngineAudio>().SetStopEngineSound(true);
+
+            CheckAndUpdateLevel();
+        }
+
+        private static void CheckAndUpdateLevel()
+        {
+            int currentLevel = PlayerPrefs.GetInt(CURRENT_LEVEL);
+            int latestLevel = PlayerPrefs.GetInt(LATEST_LEVEL);
+
+            if (currentLevel == latestLevel)
+            {
+                latestLevel += 1;
+                PlayerPrefs.SetInt(LATEST_LEVEL, latestLevel);
             }
         }
     }
