@@ -41,8 +41,14 @@ namespace Voidwalker
 
         public void SetCurrentLevel(GameObject level)
         {
-            int levelIndex = Array.IndexOf(_levels, level);
+            int levelIndex = GetLevelIndex(level);
             PlayerPrefs.SetInt(CURRENT_LEVEL, levelIndex);
+        }
+
+        public int GetLevelIndex(GameObject level)
+        {
+            int levelIndex = Array.IndexOf(_levels, level);
+            return levelIndex;
         }
     }
 }

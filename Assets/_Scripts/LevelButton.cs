@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -5,10 +6,24 @@ namespace Voidwalker
 {
     public class LevelButton : MonoBehaviour
     {
-        [field:SerializeField] public bool IsLocked { get; private set; } = true;
+        [field: SerializeField] public bool IsLocked { get; private set; } = true;
 
         [SerializeField] private GameObject _levelButton;
         [SerializeField] private GameObject _lockedLevelButton;
+
+        private Button _unlockedButton;
+        private TextMeshProUGUI _levelTitle;
+
+        private LevelManager _levelManager;
+
+        private void Awake()
+        {
+            _levelManager = FindFirstObjectByType<LevelManager>();
+
+            _unlockedButton = _levelButton.GetComponent<Button>();
+
+            _levelTitle = _levelButton.GetComponentInChildren<TextMeshProUGUI>();
+        }
 
         private void Start()
         {
@@ -18,13 +33,13 @@ namespace Voidwalker
 
         private void InitializeButton()
         {
-            LevelManager levelManager = FindFirstObjectByType<LevelManager>();
+            int levelIndex = _levelManager.GetLevelIndex(gameObject) + 1;
 
-            Button button = _levelButton.GetComponent<Button>();
+            _levelTitle.text = levelIndex.ToString();
 
-            button.onClick.AddListener(() =>
+            _unlockedButton.onClick.AddListener(() =>
             {
-                levelManager.SetCurrentLevel(gameObject);
+                _levelManager.SetCurrentLevel(gameObject);
             });
         }
 
