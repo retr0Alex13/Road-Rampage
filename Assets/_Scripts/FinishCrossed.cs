@@ -5,8 +5,6 @@ namespace Voidwalker
 {
     public class FinishCrossed : MonoBehaviour
     {
-        [SerializeField] private LevelManager _levelManager;
-
         private const string LATEST_LEVEL = "LatestLevel";
         private const string CURRENT_LEVEL = "Level";
 
@@ -19,6 +17,7 @@ namespace Voidwalker
             if (car != null)
             {
                 HandleCarFinished(car);
+                CheckAndUpdateLevel();
             }
         }
 
@@ -26,8 +25,6 @@ namespace Voidwalker
         {
             car.SetCarStop(true);
             car.GetComponent<EngineAudio>().SetStopEngineSound(true);
-
-            CheckAndUpdateLevel();
         }
 
         private static void CheckAndUpdateLevel()
