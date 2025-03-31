@@ -1209,7 +1209,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &345094212
 Transform:
   m_ObjectHideFlags: 0
@@ -6223,15 +6223,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2267947301730692230, guid: 26681344a8cb84c7e8b473fbd5019dec, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2267947301730692230, guid: 26681344a8cb84c7e8b473fbd5019dec, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2267947301730692230, guid: 26681344a8cb84c7e8b473fbd5019dec, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2267947301856911464, guid: 26681344a8cb84c7e8b473fbd5019dec, type: 3}
       propertyPath: Panel_Win
@@ -6255,11 +6255,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2267947302024434022, guid: 26681344a8cb84c7e8b473fbd5019dec, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2267947302024434022, guid: 26681344a8cb84c7e8b473fbd5019dec, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2267947302158564584, guid: 26681344a8cb84c7e8b473fbd5019dec, type: 3}
       propertyPath: Ammo_Missile
@@ -6315,7 +6315,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2267947303666553789, guid: 26681344a8cb84c7e8b473fbd5019dec, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2267947303666553789, guid: 26681344a8cb84c7e8b473fbd5019dec, type: 3}
       propertyPath: m_TagString
@@ -7395,7 +7395,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2046906322
 Transform:
   m_ObjectHideFlags: 0

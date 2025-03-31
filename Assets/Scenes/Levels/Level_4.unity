@@ -1235,6 +1235,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gold Cup (Low Poly)_1
       objectReference: {fileID: 0}
+    - target: {fileID: 2456340012754175374, guid: 414e8da994305fe45ba3b91f7781c519, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2980675514919477044, guid: 414e8da994305fe45ba3b91f7781c519, type: 3}
       propertyPath: m_LocalScale.x
       value: 2
@@ -5625,6 +5629,10 @@ PrefabInstance:
     - target: {fileID: 2456340012754175374, guid: 414e8da994305fe45ba3b91f7781c519, type: 3}
       propertyPath: m_Name
       value: Gold Cup (Low Poly)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2456340012754175374, guid: 414e8da994305fe45ba3b91f7781c519, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2980675514919477044, guid: 414e8da994305fe45ba3b91f7781c519, type: 3}
       propertyPath: m_LocalScale.x
