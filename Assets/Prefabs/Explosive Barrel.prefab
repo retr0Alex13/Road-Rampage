@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 8907028735487726757}
   - component: {fileID: 4400289160849784452}
   - component: {fileID: 1049088900747179460}
-  - component: {fileID: 4053248100801534462}
   - component: {fileID: 4959107606612291164}
   - component: {fileID: 5140062333893056712}
+  - component: {fileID: 2085217967060269859}
   m_Layer: 0
   m_Name: Explosive Barrel
   m_TagString: Natural
@@ -125,8 +125,38 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 1
---- !u!64 &4053248100801534462
-MeshCollider:
+--- !u!114 &4959107606612291164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 643677464676224115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 785910dc873ae4bc0b372e31d48de0a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 2
+  IsExplosive: 1
+  destroyParentOnDeath: 1
+  MainCollider: {fileID: 0}
+  ExplosionEffect: {fileID: 100006, guid: 4d4c92b4b69c24666b95b710fa62cb24, type: 3}
+--- !u!114 &5140062333893056712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 643677464676224115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17c914fc6a3d741a9b6863534d1673ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TargetType: 4
+--- !u!65 &2085217967060269859
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -143,40 +173,9 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -6888592040382724874, guid: ab38534e2f6f42f468da880b2ee19deb, type: 3}
---- !u!114 &4959107606612291164
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 643677464676224115}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 785910dc873ae4bc0b372e31d48de0a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Health: 2
-  IsExplosive: 1
-  destroyParentOnDeath: 1
-  MainCollider: {fileID: 4053248100801534462}
-  ExplosionEffect: {fileID: 100006, guid: 4d4c92b4b69c24666b95b710fa62cb24, type: 3}
---- !u!114 &5140062333893056712
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 643677464676224115}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17c914fc6a3d741a9b6863534d1673ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TargetType: 4
+  serializedVersion: 3
+  m_Size: {x: 0.64274865, y: 0.6427484, z: 1.0853376}
+  m_Center: {x: 0.0001733005, y: -0.00017593805, z: 0.003936262}
 --- !u!1001 &989541711802457173
 PrefabInstance:
   m_ObjectHideFlags: 0
