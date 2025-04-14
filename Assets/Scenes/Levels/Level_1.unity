@@ -4368,6 +4368,14 @@ PrefabInstance:
       propertyPath: m_AnchorMin.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 705530364274745919, guid: 558180c27ef6cbd4fad4d9ff9a381973, type: 3}
+      propertyPath: m_ScreenMatchMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 705530364274745919, guid: 558180c27ef6cbd4fad4d9ff9a381973, type: 3}
+      propertyPath: m_MatchWidthOrHeight
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 705530364442792758, guid: 558180c27ef6cbd4fad4d9ff9a381973, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -4375,6 +4383,10 @@ PrefabInstance:
     - target: {fileID: 705530364442792758, guid: 558180c27ef6cbd4fad4d9ff9a381973, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 767615191664047744, guid: 558180c27ef6cbd4fad4d9ff9a381973, type: 3}
+      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
+      value: 1801810542
       objectReference: {fileID: 0}
     - target: {fileID: 928157376860947617, guid: 558180c27ef6cbd4fad4d9ff9a381973, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4416,12 +4428,72 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1457852368033249454, guid: 558180c27ef6cbd4fad4d9ff9a381973, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1833402748413362047, guid: 558180c27ef6cbd4fad4d9ff9a381973, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1833402748413362047, guid: 558180c27ef6cbd4fad4d9ff9a381973, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1833402748413362047, guid: 558180c27ef6cbd4fad4d9ff9a381973, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1833402748413362047, guid: 558180c27ef6cbd4fad4d9ff9a381973, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4409106343736362810, guid: 558180c27ef6cbd4fad4d9ff9a381973, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5911328387370851902, guid: 558180c27ef6cbd4fad4d9ff9a381973, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5911328387370851902, guid: 558180c27ef6cbd4fad4d9ff9a381973, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5911328387370851902, guid: 558180c27ef6cbd4fad4d9ff9a381973, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5911328387370851902, guid: 558180c27ef6cbd4fad4d9ff9a381973, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5959251139248762136, guid: 558180c27ef6cbd4fad4d9ff9a381973, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -793
+      objectReference: {fileID: 0}
+    - target: {fileID: 5959251139248762136, guid: 558180c27ef6cbd4fad4d9ff9a381973, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 310
+      objectReference: {fileID: 0}
+    - target: {fileID: 6709842786178825177, guid: 558180c27ef6cbd4fad4d9ff9a381973, type: 3}
+      propertyPath: m_ShowMaskGraphic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7587683871107138304, guid: 558180c27ef6cbd4fad4d9ff9a381973, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 7587683871107138304, guid: 558180c27ef6cbd4fad4d9ff9a381973, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8501731365655476495, guid: 558180c27ef6cbd4fad4d9ff9a381973, type: 3}
+      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
+      value: 1801810542
+      objectReference: {fileID: 0}
+    - target: {fileID: 8666564978124774309, guid: 558180c27ef6cbd4fad4d9ff9a381973, type: 3}
+      propertyPath: controllerType
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

@@ -2286,8 +2286,11 @@ MonoBehaviour:
   text_health: {fileID: 451778402}
   text_speed: {fileID: 589669479297159000}
   isPaused: 0
+  gameOverScreenDelay: 5
+  winScreenDelay: 1
   Panel_Pause: {fileID: 6759734845853344017}
   Panel_GameOver: {fileID: 5866345196934869434}
+  Panel_Win: {fileID: 0}
   Button_Pause: {fileID: 3685961911907870336}
   Panel_Settings: {fileID: 1728141507239755965}
 --- !u!1 &4039674411612255661
