@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Runtime.InteropServices;
+using UnityEngine;
 
 namespace CarControllerwithShooting
 {
@@ -21,6 +22,11 @@ namespace CarControllerwithShooting
 
         private void Start()
         {
+            bool isMobile = Application.platform == RuntimePlatform.WebGLPlayer && Application.isMobilePlatform;
+            if (isMobile)
+            {
+                controllerType = ControllerType.Mobile;
+            }
             if (controllerType == ControllerType.KeyboardMouse)
             {
                 GameCanvas.Instance.Configure_For_PCConsole();
@@ -43,7 +49,7 @@ namespace CarControllerwithShooting
                 cameraFPS.SetActive(false);
                 cameraTPS.SetActive(true);
             }
-            if(!isWeaponsActive)
+            if (!isWeaponsActive)
             {
                 GunController.Instance.DeactivateWeapons();
             }

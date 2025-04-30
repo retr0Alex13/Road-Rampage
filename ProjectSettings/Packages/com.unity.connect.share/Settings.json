@@ -19,7 +19,7 @@
             {
                 "type": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
                 "key": "buildOutputDirList",
-                "value": "{\"m_Value\":\"E:/Unity/Road Rampage/WebGL Builds/RoadRampage_1;E:/Unity/Road Rampage/WebGL Builds/Build;E:/Unity/Road Rampage/WebGL Builds/Road Rampage;E:/Unity/Road Rampage/WebGL Builds;;;;;;\"}"
+                "value": "{\"m_Value\":\"E:/Unity/Road Rampage/Builds/RoadRampage;E:/Unity/Road Rampage/Builds/Web;E:/Unity/Road Rampage/WebGL Builds/RoadRampage_1;E:/Unity/Road Rampage/WebGL Builds/Build;E:/Unity/Road Rampage/WebGL Builds/Road Rampage;E:/Unity/Road Rampage/WebGL Builds;;;;\"}"
             }
         ]
     }
