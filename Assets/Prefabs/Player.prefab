@@ -52,6 +52,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _mouseButton: 1
+  _mouseBtnImage: {fileID: 7523437979738696120}
 --- !u!1 &1875611213220021079
 GameObject:
   m_ObjectHideFlags: 0
@@ -396,6 +397,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _mouseButton: 0
+  _mouseBtnImage: {fileID: 9096740498810489366}
 --- !u!1 &4810318288807394770
 GameObject:
   m_ObjectHideFlags: 0

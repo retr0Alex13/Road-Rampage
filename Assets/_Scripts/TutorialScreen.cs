@@ -6,6 +6,8 @@ namespace Voidwalker
     {
         [SerializeField] private int _mouseButton = 0;
 
+        [SerializeField] private GameObject _mouseBtnImage;
+
         public void ShowTutorialScreen()
         {
             gameObject.SetActive(true);
@@ -16,6 +18,16 @@ namespace Voidwalker
         {
             gameObject.SetActive(false);
             Time.timeScale = 1;
+        }
+
+        private void Start()
+        {
+            bool isMobile = Application.platform == RuntimePlatform.WebGLPlayer && Application.isMobilePlatform;
+
+            if (isMobile)
+            {
+                _mouseBtnImage.SetActive(false);
+            }
         }
 
         private void Update()

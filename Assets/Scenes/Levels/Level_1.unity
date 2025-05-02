@@ -4528,6 +4528,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -20
       objectReference: {fileID: 0}
+    - target: {fileID: 4368048589660107321, guid: 558180c27ef6cbd4fad4d9ff9a381973, type: 3}
+      propertyPath: _mouseBtnImage
+      value: 
+      objectReference: {fileID: 3118000691556309389}
     - target: {fileID: 4409106343736362810, guid: 558180c27ef6cbd4fad4d9ff9a381973, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -4596,6 +4600,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7723939786456007195, guid: 558180c27ef6cbd4fad4d9ff9a381973, type: 3}
+      propertyPath: _mouseBtnImage
+      value: 
+      objectReference: {fileID: 3118000691556309388}
     - target: {fileID: 7785075994222418112, guid: 558180c27ef6cbd4fad4d9ff9a381973, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -4625,6 +4633,16 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 558180c27ef6cbd4fad4d9ff9a381973, type: 3}
+--- !u!1 &3118000691556309388 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9096740498810489366, guid: 558180c27ef6cbd4fad4d9ff9a381973, type: 3}
+  m_PrefabInstance: {fileID: 3118000691556309387}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3118000691556309389 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7523437979738696120, guid: 558180c27ef6cbd4fad4d9ff9a381973, type: 3}
+  m_PrefabInstance: {fileID: 3118000691556309387}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &3189414202689962432 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7723939786456007195, guid: 558180c27ef6cbd4fad4d9ff9a381973, type: 3}
