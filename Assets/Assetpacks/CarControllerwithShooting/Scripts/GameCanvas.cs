@@ -112,6 +112,8 @@ namespace CarControllerwithShooting
                 Cursor.lockState = CursorLockMode.Confined;
                 Cursor.visible = true;
             }
+
+            PokiUnitySDK.Instance.gameplayStop();
         }
 
         public void Show_WinScreen()
@@ -130,6 +132,8 @@ namespace CarControllerwithShooting
                 Cursor.lockState = CursorLockMode.Confined;
                 Cursor.visible = true;
             }
+
+            PokiUnitySDK.Instance.gameplayStop();
         }
 
         public void Click_Restart()
@@ -272,6 +276,7 @@ namespace CarControllerwithShooting
         private void OnDisable()
         {
             Time.timeScale = 1;
+            AudioListener.pause = false;
         }
     }
 }
