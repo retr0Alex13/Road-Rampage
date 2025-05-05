@@ -148,6 +148,7 @@ namespace CarControllerwithShooting
             isPaused = false;
             Panel_Pause.SetActive(false);
             Panel_Settings.SetActive(false);
+            AudioListener.pause = false;
         }
 
         public void Click_Settings()
@@ -175,6 +176,7 @@ namespace CarControllerwithShooting
             Time.timeScale = 0;
             isPaused = true;
             Panel_Pause.SetActive(true);
+            AudioListener.pause = true;
         }
 
         public void Click_Button_CameraSwitch()
