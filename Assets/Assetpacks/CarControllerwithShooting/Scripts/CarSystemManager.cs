@@ -18,6 +18,11 @@ namespace CarControllerwithShooting
         public void Awake()
         {
             Instance = this;
+
+            if (PokiUnitySDK.Instance == null)
+            {
+                PokiUnitySDK.Instance.init();
+            }
         }
 
         private void Start()
