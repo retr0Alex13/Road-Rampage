@@ -16,12 +16,11 @@ namespace Voidwalker
             if (_instance != null && _instance != this)
             {
                 Destroy(this.gameObject);
+                return;
             }
-            else
-            {
-                _instance = this;
-                DontDestroyOnLoad(this.gameObject);
-            }
+
+            _instance = this;
+            DontDestroyOnLoad(this.gameObject);
         }
 
 
@@ -33,8 +32,14 @@ namespace Voidwalker
             {
                 GameCanvas.Instance.Click_Pause();
             }
-
+#if UNITY_EDITOR
+            if (GameCanvas.Instance != null)
+            {
+                GameCanvas.Instance.UnpauseGame();
+            }
+#else
             PokiUnitySDK.Instance.commercialBreakCallBack = OnCommercialBreakEnd;
+#endif
             PokiUnitySDK.Instance.commercialBreak();
         }
 

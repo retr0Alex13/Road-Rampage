@@ -200,10 +200,8 @@ namespace CarControllerwithShooting
             if (Input.anyKeyDown && !_playerPressedKey)
             {
 
-#if UNITY_EDITOR
-#else
                 AdManager.Instance.ShowCommercialBreak();
-#endif
+
                 _playerPressedKey = true;
                 return;
             }
