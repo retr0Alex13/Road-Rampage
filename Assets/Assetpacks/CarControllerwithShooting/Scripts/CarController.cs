@@ -199,11 +199,9 @@ namespace CarControllerwithShooting
 
             if (Input.anyKeyDown && !_playerPressedKey)
             {
-
                 AdManager.Instance.ShowCommercialBreak();
 
                 _playerPressedKey = true;
-                return;
             }
         }
 
