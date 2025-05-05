@@ -6,8 +6,8 @@ namespace Voidwalker
     {
         [SerializeField] private GameObject[] _levels;
 
-        private const string LATEST_LEVEL = "LatestLevel";
-        private const string CURRENT_LEVEL = "Level";
+        private const string LATEST_LEVEL = "savedgame_latestlevel";
+        private const string CURRENT_LEVEL = "savedgame_level";
 
         private void Start()
         {
