@@ -12,6 +12,7 @@ namespace Voidwalker
         private void Start()
         {
             InitializeLevels();
+            AdManager.Instance.ShowCommercialBreak();
         }
 
         private void InitializeLevels()

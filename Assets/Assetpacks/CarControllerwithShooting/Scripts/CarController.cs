@@ -1,4 +1,5 @@
 using UnityEngine;
+using Voidwalker;
 
 namespace CarControllerwithShooting
 {
@@ -51,6 +52,7 @@ namespace CarControllerwithShooting
         private Vector2 _smoothInputVelocity;
         private int _emissionPropertyId;
         private float _currentMaxSteerAngle;
+        private bool _playerPressedKey;
 
         public GameObject crushingParticle;
 
@@ -193,6 +195,17 @@ namespace CarControllerwithShooting
             {
                 _stopCar = true;
                 //GameCanvas.Instance.Show_OutOfGasMessage();
+            }
+
+            if (Input.anyKeyDown && !_playerPressedKey)
+            {
+
+#if UNITY_EDITOR
+#else
+                AdManager.Instance.ShowCommercialBreak();
+#endif
+                _playerPressedKey = true;
+                return;
             }
         }
 

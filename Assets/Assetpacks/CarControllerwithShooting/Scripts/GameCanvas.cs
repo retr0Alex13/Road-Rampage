@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using Voidwalker;
 
 namespace CarControllerwithShooting
 {
@@ -149,6 +150,22 @@ namespace CarControllerwithShooting
             Panel_Pause.SetActive(false);
             Panel_Settings.SetActive(false);
             AudioListener.pause = false;
+
+            AdManager.Instance.ShowCommercialBreak();
+        }
+
+        public void UnpauseGame()
+        {
+            if (CarSystemManager.Instance.controllerType == ControllerType.KeyboardMouse)
+            {
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
+            }
+            Time.timeScale = 1;
+            isPaused = false;
+            Panel_Pause.SetActive(false);
+            Panel_Settings.SetActive(false);
+            AudioListener.pause = false;
         }
 
         public void Click_Settings()
@@ -177,6 +194,8 @@ namespace CarControllerwithShooting
             isPaused = true;
             Panel_Pause.SetActive(true);
             AudioListener.pause = true;
+
+            PokiUnitySDK.Instance.gameplayStop();
         }
 
         public void Click_Button_CameraSwitch()
