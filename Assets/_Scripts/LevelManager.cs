@@ -13,6 +13,7 @@ namespace Voidwalker
         {
             InitializeLevels();
             AdManager.Instance.ShowCommercialBreak();
+            PokiUnitySDK.Instance.gameplayStart();
         }
 
         private void InitializeLevels()

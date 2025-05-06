@@ -37,6 +37,8 @@ namespace CarControllerwithShooting
         public GameObject Button_Pause;
         public GameObject Panel_Settings;
 
+        private bool anyKeyPressed;
+
         void Awake()
         {
             Instance = this;
@@ -144,17 +146,6 @@ namespace CarControllerwithShooting
 
         public void Click_Continue()
         {
-            if (CarSystemManager.Instance.controllerType == ControllerType.KeyboardMouse)
-            {
-                Cursor.lockState = CursorLockMode.Locked;
-                Cursor.visible = false;
-            }
-            Time.timeScale = 1;
-            isPaused = false;
-            Panel_Pause.SetActive(false);
-            Panel_Settings.SetActive(false);
-            AudioListener.pause = false;
-
             AdManager.Instance.ShowCommercialBreak();
         }
 
@@ -170,6 +161,8 @@ namespace CarControllerwithShooting
             Panel_Pause.SetActive(false);
             Panel_Settings.SetActive(false);
             AudioListener.pause = false;
+
+            PokiUnitySDK.Instance.gameplayStart();
         }
 
         public void Click_Settings()
@@ -221,7 +214,14 @@ namespace CarControllerwithShooting
 
         private void Update()
         {
-            if(Input.GetKeyUp(KeyCode.C) && CarSystemManager.Instance.controllerType == ControllerType.KeyboardMouse)
+            if (!anyKeyPressed && (Input.anyKeyDown || Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0))
+            {
+                PokiUnitySDK.Instance.gameplayStart();
+                StartCoroutine(AdManager.Instance.ShowDelayedCommercialBreak(0.5f));
+                anyKeyPressed = true;
+            }
+
+            if (Input.GetKeyUp(KeyCode.C) && CarSystemManager.Instance.controllerType == ControllerType.KeyboardMouse)
             {
                 Click_Button_CameraSwitch();
             }

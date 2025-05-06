@@ -1,4 +1,5 @@
 using CarControllerwithShooting;
+using System.Collections;
 using UnityEngine;
 
 namespace Voidwalker
@@ -26,31 +27,26 @@ namespace Voidwalker
 
         public void ShowCommercialBreak()
         {
-            bool isGamePaused = Time.timeScale == 1 ? true : false;
+            bool isGamePaused = GameCanvas.Instance.isPaused;
 
-            if (!isGamePaused || GameCanvas.Instance != null)
+            if (!isGamePaused && GameCanvas.Instance != null)
             {
                 GameCanvas.Instance.Click_Pause();
             }
-#if UNITY_EDITOR
+
+            PokiUnitySDK.Instance.commercialBreak();
+
             if (GameCanvas.Instance != null)
             {
                 GameCanvas.Instance.UnpauseGame();
             }
-#else
-            PokiUnitySDK.Instance.commercialBreakCallBack = OnCommercialBreakEnd;
-#endif
-            PokiUnitySDK.Instance.commercialBreak();
         }
 
-        private void OnCommercialBreakEnd()
+        public IEnumerator ShowDelayedCommercialBreak(float delay)
         {
-            if (GameCanvas.Instance != null)
-            {
-                GameCanvas.Instance.UnpauseGame();
-            }
+            yield return new WaitForSeconds(delay);
 
-            PokiUnitySDK.Instance.gameplayStart();
+            ShowCommercialBreak();
         }
     }
 }

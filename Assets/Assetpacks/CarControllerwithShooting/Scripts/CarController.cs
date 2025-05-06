@@ -196,13 +196,6 @@ namespace CarControllerwithShooting
                 _stopCar = true;
                 //GameCanvas.Instance.Show_OutOfGasMessage();
             }
-
-            if (Input.anyKeyDown && !_playerPressedKey)
-            {
-                AdManager.Instance.ShowCommercialBreak();
-
-                _playerPressedKey = true;
-            }
         }
 
         public void Move()
