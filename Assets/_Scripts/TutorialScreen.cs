@@ -1,3 +1,5 @@
+using CarControllerwithShooting;
+using TMPro;
 using UnityEngine;
 
 namespace Voidwalker
@@ -8,16 +10,23 @@ namespace Voidwalker
 
         [SerializeField] private GameObject _mouseBtnImage;
 
+        [SerializeField] private TextMeshProUGUI _clickText;
+        [SerializeField] private TextMeshProUGUI _tapText;
+
         public void ShowTutorialScreen()
         {
             gameObject.SetActive(true);
             Time.timeScale = 0;
+
+            GameCanvas.Instance.joystick.gameObject.SetActive(false);
         }
 
         public void HideTutorialScreen()
         {
             gameObject.SetActive(false);
             Time.timeScale = 1;
+
+            GameCanvas.Instance.joystick.gameObject.SetActive(true);
         }
 
         private void Start()
@@ -27,6 +36,14 @@ namespace Voidwalker
             if (isMobile)
             {
                 _mouseBtnImage.SetActive(false);
+                _clickText.gameObject.SetActive(false);
+                _tapText.gameObject.SetActive(true);
+            }
+            else
+            {
+                _mouseBtnImage.SetActive(true);
+                _clickText.gameObject.SetActive(true);
+                _tapText.gameObject.SetActive(false);
             }
         }
 
