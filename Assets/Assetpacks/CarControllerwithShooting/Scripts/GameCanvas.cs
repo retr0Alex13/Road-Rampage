@@ -17,6 +17,7 @@ namespace CarControllerwithShooting
         public int isFiringUpdate = 0;
         public Slider Slider_CurrentFuel;
         public Text Text_CurrentFuel;
+        public Text pauseText;
 
         public Text Text_Ammo_Machinegun;
         public Text Text_Ammo_Missile;
@@ -78,12 +79,14 @@ namespace CarControllerwithShooting
         public void Configure_For_Mobile()
         {
             joystick.gameObject.SetActive(true);
+            pauseText.gameObject.SetActive(false);
             GameCanvas.Instance.button_HandBrake.gameObject.SetActive(true);
         }
 
         public void Configure_For_PCConsole()
         {
             joystick.gameObject.SetActive(false);
+            pauseText.gameObject.SetActive(true);
             button_CameraChange.GetComponentInChildren<Text>().text = "Camera (C)";
         }
 
