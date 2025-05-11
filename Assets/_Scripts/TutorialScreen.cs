@@ -13,12 +13,17 @@ namespace Voidwalker
         [SerializeField] private TextMeshProUGUI _clickText;
         [SerializeField] private TextMeshProUGUI _tapText;
 
+        private bool _isMobile;
+
         public void ShowTutorialScreen()
         {
             gameObject.SetActive(true);
             Time.timeScale = 0;
 
-            GameCanvas.Instance.joystick.gameObject.SetActive(false);
+            if (_isMobile)
+            {
+                GameCanvas.Instance.joystick.gameObject.SetActive(false);
+            }
         }
 
         public void HideTutorialScreen()
@@ -26,14 +31,17 @@ namespace Voidwalker
             gameObject.SetActive(false);
             Time.timeScale = 1;
 
-            GameCanvas.Instance.joystick.gameObject.SetActive(true);
+            if (_isMobile)
+            {
+                GameCanvas.Instance.joystick.gameObject.SetActive(true);
+            }
         }
 
         private void Start()
         {
-            bool isMobile = Application.platform == RuntimePlatform.WebGLPlayer && Application.isMobilePlatform;
+            _isMobile = Application.platform == RuntimePlatform.WebGLPlayer && Application.isMobilePlatform;
 
-            if (isMobile)
+            if (_isMobile)
             {
                 _mouseBtnImage.SetActive(false);
                 _clickText.gameObject.SetActive(false);
