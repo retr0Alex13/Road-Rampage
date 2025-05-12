@@ -183,6 +183,46 @@ MonoBehaviour:
   cameraFPS: {fileID: 8329436024337079035}
   cameraTPS: {fileID: 3982288130899196520}
   isWeaponsActive: 1
+--- !u!1 &7989394185310083793
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 14695054671922014}
+  - component: {fileID: 7466801823651089026}
+  m_Layer: 0
+  m_Name: alternativeCamTarget
+  m_TagString: Untagged
+  m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &14695054671922014
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7989394185310083793}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 5.8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5667418517514147122}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &7466801823651089026
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7989394185310083793}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &2526481109396354692
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -464,6 +504,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Car
       objectReference: {fileID: 0}
+    - target: {fileID: 198737313945415657, guid: 0aca9bb2e5c9c4145bf0d89014822e93, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2
+      objectReference: {fileID: 0}
     - target: {fileID: 6347010711917910712, guid: 0aca9bb2e5c9c4145bf0d89014822e93, type: 3}
       propertyPath: CurrentFuel
       value: 40
@@ -474,7 +518,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 198737313120763426, guid: 0aca9bb2e5c9c4145bf0d89014822e93, type: 3}
+      insertIndex: 1
+      addedObject: {fileID: 14695054671922014}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0aca9bb2e5c9c4145bf0d89014822e93, type: 3}
 --- !u!4 &5667418517514147122 stripped
