@@ -18,6 +18,8 @@ namespace CarControllerwithShooting
         public Slider Slider_CurrentFuel;
         public Text Text_CurrentFuel;
         public Text pauseText;
+        public Image leftClickButton;
+        public Image rightClickButton;
 
         public Text Text_Ammo_Machinegun;
         public Text Text_Ammo_Missile;
@@ -80,13 +82,19 @@ namespace CarControllerwithShooting
         {
             joystick.gameObject.SetActive(true);
             pauseText.gameObject.SetActive(false);
-            GameCanvas.Instance.button_HandBrake.gameObject.SetActive(true);
+            leftClickButton.gameObject.SetActive(false);
+            rightClickButton.gameObject.SetActive(false);
+            button_HandBrake.gameObject.SetActive(true);
+            Button_Pause.SetActive(true);
         }
 
         public void Configure_For_PCConsole()
         {
             joystick.gameObject.SetActive(false);
             pauseText.gameObject.SetActive(true);
+            button_HandBrake.gameObject.SetActive(false);
+            leftClickButton.gameObject.SetActive(true);
+            rightClickButton.gameObject.SetActive(true);
             button_CameraChange.GetComponentInChildren<Text>().text = "Camera (C)";
         }
 

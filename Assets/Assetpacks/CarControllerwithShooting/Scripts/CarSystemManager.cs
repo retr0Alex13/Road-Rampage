@@ -35,7 +35,6 @@ namespace CarControllerwithShooting
             {
                 GameCanvas.Instance.Configure_For_PCConsole();
                 Cursor.visible = false;
-                GameCanvas.Instance.button_HandBrake.gameObject.SetActive(false);
                 Cursor.lockState = CursorLockMode.Locked;
             }
             else if (controllerType == ControllerType.Mobile)
