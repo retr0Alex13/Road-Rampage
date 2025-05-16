@@ -29,6 +29,9 @@ namespace CarControllerwithShooting
             bool isMobile = Application.platform == RuntimePlatform.WebGLPlayer && Application.isMobilePlatform;
             if (isMobile)
             {
+                Screen.autorotateToLandscapeLeft = true;
+                Screen.orientation = ScreenOrientation.LandscapeLeft;
+
                 controllerType = ControllerType.Mobile;
             }
             if (controllerType == ControllerType.KeyboardMouse)
