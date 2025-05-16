@@ -20,10 +20,7 @@ namespace Voidwalker
             gameObject.SetActive(true);
             Time.timeScale = 0;
 
-            if (_isMobile)
-            {
-                GameCanvas.Instance.joystick.gameObject.SetActive(false);
-            }
+            GameCanvas.Instance.joystick.gameObject.SetActive(false);
         }
 
         public void HideTutorialScreen()
