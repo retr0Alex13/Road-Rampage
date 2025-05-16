@@ -27,7 +27,12 @@ namespace Voidwalker
 
         public void ShowCommercialBreak()
         {
-            bool isGamePaused = GameCanvas.Instance.isPaused;
+            bool isGamePaused = false;
+
+            if (GameCanvas.Instance != null)
+            {
+                isGamePaused = GameCanvas.Instance.isPaused;
+            }
 
             if (!isGamePaused && GameCanvas.Instance != null)
             {
