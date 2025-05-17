@@ -5,8 +5,8 @@ namespace Voidwalker
 {
     public class FinishCrossed : MonoBehaviour
     {
-        private const string LATEST_LEVEL = "LatestLevel";
-        private const string CURRENT_LEVEL = "Level";
+        private const string LATEST_LEVEL = "savedgame_latestlevel";
+        private const string CURRENT_LEVEL = "savedgame_level";
 
         private void OnTriggerEnter(Collider other)
         {
@@ -17,7 +17,15 @@ namespace Voidwalker
             if (car != null)
             {
                 HandleCarFinished(car);
-                CheckAndUpdateLevel();
+
+                int currentLevelIndex = PlayerPrefs.GetInt(CURRENT_LEVEL);
+                int latestLevel = PlayerPrefs.GetInt(LATEST_LEVEL, 0);
+
+                if (currentLevelIndex >= latestLevel)
+                {
+                    PlayerPrefs.SetInt(LATEST_LEVEL, currentLevelIndex + 1);
+                    PlayerPrefs.Save();
+                }
             }
         }
 
@@ -25,18 +33,6 @@ namespace Voidwalker
         {
             car.SetCarStop(true);
             car.GetComponent<EngineAudio>().SetStopEngineSound(true);
-        }
-
-        private static void CheckAndUpdateLevel()
-        {
-            int currentLevel = PlayerPrefs.GetInt(CURRENT_LEVEL);
-            int latestLevel = PlayerPrefs.GetInt(LATEST_LEVEL);
-
-            if (currentLevel == latestLevel)
-            {
-                latestLevel += 1;
-                PlayerPrefs.SetInt(LATEST_LEVEL, latestLevel);
-            }
         }
     }
 }

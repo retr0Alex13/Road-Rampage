@@ -52,5 +52,22 @@ namespace Voidwalker
             int levelIndex = Array.IndexOf(_levels, level);
             return levelIndex;
         }
+
+        public void CompleteLevel(int levelIndex)
+        {
+            int latestLevel = PlayerPrefs.GetInt(LATEST_LEVEL, 0);
+
+            if (levelIndex >= latestLevel)
+            {
+                int nextLevelIndex = levelIndex + 1;
+
+                if (nextLevelIndex < _levels.Length)
+                {
+                    PlayerPrefs.SetInt(LATEST_LEVEL, nextLevelIndex);
+                    UnlockLevel(nextLevelIndex);
+                    PlayerPrefs.Save();
+                }
+            }
+        }
     }
 }
