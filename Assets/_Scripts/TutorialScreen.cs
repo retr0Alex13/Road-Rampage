@@ -1,6 +1,7 @@
 using CarControllerwithShooting;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Voidwalker
 {
@@ -8,7 +9,10 @@ namespace Voidwalker
     {
         [SerializeField] private int _mouseButton = 0;
 
+        [SerializeField] private Image _controlsImage;
+
         [SerializeField] private GameObject _mouseBtnImage;
+        [SerializeField] private GameObject _arrowImage;
 
         [SerializeField] private TextMeshProUGUI _clickText;
         [SerializeField] private TextMeshProUGUI _tapText;
@@ -20,11 +24,13 @@ namespace Voidwalker
             gameObject.SetActive(true);
             Time.timeScale = 0;
 
+            _arrowImage.SetActive(true);
             GameCanvas.Instance.joystick.gameObject.SetActive(false);
         }
 
         public void HideTutorialScreen()
         {
+            _controlsImage.gameObject.SetActive(true);
             gameObject.SetActive(false);
             Time.timeScale = 1;
 

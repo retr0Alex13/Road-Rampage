@@ -40,6 +40,8 @@ namespace CarControllerwithShooting
         public GameObject Button_Pause;
         public GameObject Panel_Settings;
 
+        public bool isTutorial;
+
         private bool anyKeyPressed;
 
         void Awake()
@@ -93,8 +95,11 @@ namespace CarControllerwithShooting
             joystick.gameObject.SetActive(false);
             pauseText.gameObject.SetActive(true);
             button_HandBrake.gameObject.SetActive(false);
-            leftClickButton.gameObject.SetActive(true);
-            rightClickButton.gameObject.SetActive(true);
+            if (!isTutorial)
+            {
+                leftClickButton.gameObject.SetActive(true);
+                rightClickButton.gameObject.SetActive(true);
+            }
             button_CameraChange.GetComponentInChildren<Text>().text = "Camera (C)";
         }
 
