@@ -30,14 +30,16 @@ namespace Voidwalker
 
         public void HideTutorialScreen()
         {
-            _controlsImage.gameObject.SetActive(true);
+            if (!gameObject.activeSelf) return;
             gameObject.SetActive(false);
             Time.timeScale = 1;
 
             if (_isMobile)
             {
                 GameCanvas.Instance.joystick.gameObject.SetActive(true);
+                return;
             }
+            _controlsImage.gameObject.SetActive(true);
         }
 
         private void Start()
@@ -61,6 +63,8 @@ namespace Voidwalker
         private void Update()
         {
             if (!gameObject.activeSelf) return;
+
+            if (_isMobile) return;
 
             if (Input.GetMouseButtonDown(_mouseButton))
             {
