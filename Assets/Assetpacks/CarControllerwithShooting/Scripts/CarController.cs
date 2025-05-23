@@ -217,7 +217,7 @@ namespace CarControllerwithShooting
             {
                 input = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
                 footBrake = Input.GetAxis("Vertical");
-                handBrake = Input.GetKey(KeyCode.Space) ? 1 : 0;
+                //handBrake = Input.GetKey(KeyCode.Space) ? 1 : 0;
             }
             else
             {

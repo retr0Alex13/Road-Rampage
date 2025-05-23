@@ -7,7 +7,8 @@ namespace Voidwalker
 {
     public class TutorialScreen : MonoBehaviour
     {
-        [SerializeField] private int _mouseButton = 0;
+        //[SerializeField] private int _mouseButton = 0;
+        [SerializeField] private KeyCode _button;
 
         [SerializeField] private Image _controlsImage;
 
@@ -26,6 +27,7 @@ namespace Voidwalker
 
             _arrowImage.SetActive(true);
             GameCanvas.Instance.joystick.gameObject.SetActive(false);
+            GameCanvas.Instance.Button_Pause.SetActive(false);
         }
 
         public void HideTutorialScreen()
@@ -37,6 +39,7 @@ namespace Voidwalker
             if (_isMobile)
             {
                 GameCanvas.Instance.joystick.gameObject.SetActive(true);
+                GameCanvas.Instance.Button_Pause.SetActive(true);
                 return;
             }
             _controlsImage.gameObject.SetActive(true);
@@ -66,7 +69,7 @@ namespace Voidwalker
 
             if (_isMobile) return;
 
-            if (Input.GetMouseButtonDown(_mouseButton))
+            if (Input.GetKeyDown(_button))
             {
                 HideTutorialScreen();
             }

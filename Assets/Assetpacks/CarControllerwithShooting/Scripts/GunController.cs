@@ -107,11 +107,11 @@ namespace CarControllerwithShooting
         {
             if(CarSystemManager.Instance.controllerType == ControllerType.KeyboardMouse)
             {
-                if (Input.GetMouseButton(0))
+                if (Input.GetKey(KeyCode.Space))
                 {
                     Fire_MachineGun();
                 }
-                else if (Input.GetMouseButtonUp(1))
+                else if (Input.GetKey(KeyCode.LeftControl))
                 {
                     Fire_Missile();
                 }
