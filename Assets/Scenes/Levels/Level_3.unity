@@ -11264,6 +11264,10 @@ PrefabInstance:
       propertyPath: Ammo_Machinegun
       value: 80
       objectReference: {fileID: 0}
+    - target: {fileID: 5667418518298002681, guid: 558180c27ef6cbd4fad4d9ff9a381973, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2
+      objectReference: {fileID: 0}
     - target: {fileID: 7587683871107138304, guid: 558180c27ef6cbd4fad4d9ff9a381973, type: 3}
       propertyPath: m_Name
       value: Player
