@@ -1470,7 +1470,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _mouseButton: 1
+  _controlsImage: {fileID: 0}
   _mouseBtnImage: {fileID: 6402768713066613645}
+  _arrowImage: {fileID: 0}
   _clickText: {fileID: 6694618850783571382}
   _tapText: {fileID: 2586162417920758356}
 --- !u!1 &4038165960126153063
@@ -2390,8 +2392,8 @@ RectTransform:
   m_Children:
   - {fileID: 4039674410129633836}
   - {fileID: 4256049531589413471}
-  - {fileID: 4039674410364176541}
   - {fileID: 4039674411877986026}
+  - {fileID: 4039674410364176541}
   - {fileID: 4039674411819076347}
   - {fileID: 8210617527002737716}
   - {fileID: 587393274}
@@ -2707,6 +2709,8 @@ MonoBehaviour:
   Slider_CurrentFuel: {fileID: 4039674410129633838}
   Text_CurrentFuel: {fileID: 6962397240296473983}
   pauseText: {fileID: 8091967427152150423}
+  leftClickButton: {fileID: 0}
+  rightClickButton: {fileID: 0}
   Text_Ammo_Machinegun: {fileID: 1411828437}
   Text_Ammo_Missile: {fileID: 1702888124}
   GameUI: {fileID: 4039674411315919921}
@@ -2722,6 +2726,7 @@ MonoBehaviour:
   Panel_Win: {fileID: 5304008505880761830}
   Button_Pause: {fileID: 3685961911907870336}
   Panel_Settings: {fileID: 1728141507239755965}
+  isTutorial: 0
 --- !u!114 &6621970903201965938
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4675,7 +4680,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _mouseButton: 0
+  _controlsImage: {fileID: 0}
   _mouseBtnImage: {fileID: 7947520609141083583}
+  _arrowImage: {fileID: 0}
   _clickText: {fileID: 3233504781827393925}
   _tapText: {fileID: 7300943350188714125}
 --- !u!1 &7844866032937157218
