@@ -248,13 +248,13 @@ MonoBehaviour:
   _centerOfMassOffset: {x: 0, y: 0, z: 0.1}
   _maximumSteerAngle: 35
   _fullTorqueOverAllWheels: 2000
-  _reverseTorque: 280
+  _reverseTorque: 560
   _maxHandbrakeTorque: 1200
   _topSpeed: 150
   _revRangeBoundary: 1
   _slipLimit: 0.85
-  _brakeTorque: 4800
-  _smoothInputSpeed: 0.01
+  _brakeTorque: 9600
+  _smoothInputSpeed: 0
   _antiRollVal: 5000
   _downForce: 0
   _steerHelper: 0
