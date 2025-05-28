@@ -1733,6 +1733,10 @@ PrefabInstance:
       value: Car
       objectReference: {fileID: 0}
     - target: {fileID: 198737313120763601, guid: 0aca9bb2e5c9c4145bf0d89014822e93, type: 3}
+      propertyPath: _tractionControl
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198737313120763601, guid: 0aca9bb2e5c9c4145bf0d89014822e93, type: 3}
       propertyPath: _fullTorqueOverAllWheels
       value: 2500
       objectReference: {fileID: 0}
