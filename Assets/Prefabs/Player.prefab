@@ -1064,7 +1064,7 @@ PrefabInstance:
     - target: {fileID: 1462597693373009122, guid: eb0dc523085884fcebddf80d82eb30ed, type: 3}
       propertyPath: Target
       value: 
-      objectReference: {fileID: 14695054671922014}
+      objectReference: {fileID: 5667418518298002681}
     - target: {fileID: 1462597693373009122, guid: eb0dc523085884fcebddf80d82eb30ed, type: 3}
       propertyPath: PositionFolowForce
       value: 20
@@ -1903,6 +1903,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ac4891800abcdf4e82d6301f2ac4056, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &5667418518298002681 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 198737313945415657, guid: 0aca9bb2e5c9c4145bf0d89014822e93, type: 3}
+  m_PrefabInstance: {fileID: 5504728697406188304}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &8329436024337079035 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4610736568934560235, guid: 0aca9bb2e5c9c4145bf0d89014822e93, type: 3}
