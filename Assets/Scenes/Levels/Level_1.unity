@@ -1796,50 +1796,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 529051730854651358, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
   m_PrefabInstance: {fileID: 1070477537}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1082177081
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1082177082}
-  - component: {fileID: 1082177083}
-  m_Layer: 0
-  m_Name: Halo
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1082177082
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1082177081}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.8500004, y: 3.41, z: -73.10787}
-  m_LocalScale: {x: 2, y: 2, z: 2}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1783225851}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!122 &1082177083
-Halo:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1082177081}
-  m_Enabled: 1
-  m_Color:
-    serializedVersion: 2
-    rgba: 4281451493
-  m_Size: 5
 --- !u!1001 &1095110132
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2659,9 +2615,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 534914662513322529, guid: 50d87f1d8e1f24eab99b3349359371d2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 795288812}
-    - targetCorrespondingSourceObject: {fileID: 534914662513322529, guid: 50d87f1d8e1f24eab99b3349359371d2, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1082177082}
     - targetCorrespondingSourceObject: {fileID: 534914662513322529, guid: 50d87f1d8e1f24eab99b3349359371d2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 308373716}
