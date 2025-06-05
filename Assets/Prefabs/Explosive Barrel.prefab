@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1049088900747179460}
   - component: {fileID: 4959107606612291164}
   - component: {fileID: 5140062333893056712}
-  - component: {fileID: 2085217967060269859}
+  - component: {fileID: 205862530481805736}
   m_Layer: 0
   m_Name: Explosive Barrel
   m_TagString: Natural
@@ -97,10 +97,10 @@ Rigidbody:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 643677464676224115}
-  serializedVersion: 4
-  m_Mass: 150
-  m_Drag: 2
-  m_AngularDrag: 65
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -114,9 +114,9 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 1
+  m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 1
+  m_CollisionDetection: 0
 --- !u!114 &4959107606612291164
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -132,7 +132,7 @@ MonoBehaviour:
   Health: 2
   IsExplosive: 1
   destroyParentOnDeath: 1
-  MainCollider: {fileID: 0}
+  MainCollider: {fileID: 205862530481805736}
   ExplosionEffect: {fileID: 100006, guid: 4d4c92b4b69c24666b95b710fa62cb24, type: 3}
 --- !u!114 &5140062333893056712
 MonoBehaviour:
@@ -147,8 +147,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TargetType: 4
---- !u!65 &2085217967060269859
-BoxCollider:
+--- !u!136 &205862530481805736
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -165,6 +165,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.64274865, y: 0.6427484, z: 1.0853376}
+  serializedVersion: 2
+  m_Radius: 0.3
+  m_Height: 1.1
+  m_Direction: 2
   m_Center: {x: 0.0001733005, y: -0.00017593805, z: 0.003936262}
