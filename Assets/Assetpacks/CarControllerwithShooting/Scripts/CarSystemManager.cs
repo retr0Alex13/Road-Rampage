@@ -27,6 +27,10 @@ namespace CarControllerwithShooting
         private void Start()
         {
             bool isMobile = Application.platform == RuntimePlatform.WebGLPlayer && Application.isMobilePlatform;
+            if (SystemInfo.deviceModel.Contains("iPad") || SystemInfo.deviceModel.Contains("iPhone"))
+            {
+                isMobile = true;
+            }
             if (isMobile)
             {
                 Screen.autorotateToLandscapeLeft = true;
