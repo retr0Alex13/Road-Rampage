@@ -26,7 +26,7 @@ namespace CarControllerwithShooting
 
         public static GameCanvas Instance;
         public GameObject GameUI;
-        public GameObject RadarUI;
+        //public GameObject RadarUI;
         public GameObject GasolineUI;
         public Text text_health;
         public Text text_speed;
@@ -51,14 +51,14 @@ namespace CarControllerwithShooting
 
         void Start()
         {
-            if (CarSystemManager.Instance.ShowRadar)
-            {
-                RadarUI.SetActive(true);
-            }
-            else
-            {
-                RadarUI.SetActive(false);
-            }
+            //if (CarSystemManager.Instance.ShowRadar)
+            //{
+            //    RadarUI.SetActive(true);
+            //}
+            //else
+            //{
+            //    RadarUI.SetActive(false);
+            //}
             if(CarSystemManager.Instance.controllerType == ControllerType.KeyboardMouse)
             {
                 Button_Pause.SetActive(false);
