@@ -1258,6 +1258,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 928157376860947617}
     m_Modifications:
+    - target: {fileID: 2941018, guid: 1756185df46214db68020ea01f5f337f, type: 3}
+      propertyPath: HideOnRelease
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2941018, guid: 1756185df46214db68020ea01f5f337f, type: 3}
+      propertyPath: MovementRange
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 2941018, guid: 1756185df46214db68020ea01f5f337f, type: 3}
+      propertyPath: SnapsToFinger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 451778400, guid: 1756185df46214db68020ea01f5f337f, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -54.80005
