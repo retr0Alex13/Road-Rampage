@@ -1,3 +1,4 @@
+using Terresquall;
 using UnityEngine;
 using Voidwalker;
 
@@ -40,6 +41,8 @@ namespace CarControllerwithShooting
         [SerializeField] private float _slowdownRate = 5f;
         private bool _stopCar = false;
         private float _slowdownFactor = 1f;
+
+        [SerializeField] private VirtualJoystick virtualJoystick;
 
         private Quaternion[] _wheelMeshLocalRotations;
         private float _steerAngle;
@@ -221,8 +224,8 @@ namespace CarControllerwithShooting
             }
             else
             {
-                input = new Vector2(SimpleJoystick.Instance.HorizontalValue, SimpleJoystick.Instance.VerticalValue);
-                footBrake = SimpleJoystick.Instance.VerticalValue;
+                input = new Vector2(virtualJoystick.GetAxis("Horizontal"), virtualJoystick.GetAxis("Vertical"));
+                footBrake = virtualJoystick.GetAxis("Vertical");
             }
 
             _currentInputVector = Vector2.SmoothDamp(_currentInputVector, input, ref _smoothInputVelocity, _smoothInputSpeed);
