@@ -72,7 +72,7 @@ namespace CarControllerwithShooting
                 rigidbody.isKinematic = false;
                 rigidbody.AddExplosionForce(Random.Range(4, 15), rigidbody.transform.position, Random.Range(4, 10), Random.Range(1, 2), ForceMode.Impulse);
                 rigidbody.AddRelativeTorque(new Vector3(Random.Range(-4, 4), Random.Range(-4, 4), Random.Range(-4, 4)), ForceMode.Impulse);
-                Destroy(rigidbody.gameObject, 10);
+                Destroy(rigidbody.gameObject, 4);
             }
 
             if (IsExplosive || ExplosionEffect != null)
@@ -84,7 +84,7 @@ namespace CarControllerwithShooting
             if (RadarSystem.Instance != null)
                 RadarSystem.Instance.RemoveTarget(targetObject.gameObject);
             // Let's Destroy itself
-            Destroy(gameObject, 6);
+            Destroy(gameObject, 4);
         }
     }
 }

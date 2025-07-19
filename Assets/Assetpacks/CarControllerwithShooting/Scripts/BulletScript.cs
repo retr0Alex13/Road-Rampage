@@ -28,7 +28,7 @@ namespace CarControllerwithShooting
                         rb.isKinematic = false;
                         rb.useGravity = true;
                         rb.AddExplosionForce(20, transform.position, 1, 1.5f);
-                        Destroy(collision.collider.gameObject, 10);
+                        Destroy(collision.collider.gameObject, 4);
                     }
                 }
                 else if(collision.collider.CompareTag("Enemy"))

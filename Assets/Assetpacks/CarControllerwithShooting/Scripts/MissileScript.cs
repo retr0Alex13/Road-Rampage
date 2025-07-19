@@ -58,7 +58,7 @@ namespace CarControllerwithShooting
                                 rb.isKinematic = false;
                                 rb.useGravity = true;
                                 rb.AddExplosionForce(100, explosionPos, 10, 3.0F);
-                                Destroy(hit.gameObject, 10);
+                                Destroy(hit.gameObject, 4);
                             }
                         }
                     }
