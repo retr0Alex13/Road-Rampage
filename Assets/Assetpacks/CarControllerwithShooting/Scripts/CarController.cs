@@ -19,26 +19,31 @@ namespace CarControllerwithShooting
         public int Health = 100;
 
         [SerializeField] private Vector3 _centerOfMassOffset;
-        [Range(20f, 35f)]
-        [SerializeField] private float _maximumSteerAngle;
-        [SerializeField] private float _fullTorqueOverAllWheels;
-        [SerializeField] private float _reverseTorque;
-        [SerializeField] private float _maxHandbrakeTorque;
-        [SerializeField] private float _topSpeed = 200.0f;
+        [Range(15f, 30f)]
+        [SerializeField] private float _maximumSteerAngle = 25f;
+        [SerializeField] private float _fullTorqueOverAllWheels = 560f;
+        [SerializeField] private float _reverseTorque = 1200f;
+        [SerializeField] private float _maxHandbrakeTorque = 150f;
+        [SerializeField] private float _topSpeed = 150f;
         [SerializeField] private float _revRangeBoundary = 1f;
-        [Range(0.1f, 1f)]
-        [SerializeField] private float _slipLimit;
-        [SerializeField] private float _brakeTorque;
-        [SerializeField] private float _smoothInputSpeed = 0.2f;
+        [Range(0.3f, 1f)]
+        [SerializeField] private float _slipLimit = 0.6f;
+        [SerializeField] private float _brakeTorque = 15000f;
+        [SerializeField] private float _smoothInputSpeed = 0.15f;
         private static int NumberOfGears = 5;
 
-        [SerializeField] private float _antiRollVal = 3500.0f;
-        [SerializeField] private float _downForce = 100.0f;
-        [SerializeField, Range(0, 1)] private float _steerHelper;
-        [SerializeField, Range(0, 1)] private float _tractionControl;
+        [SerializeField] private float _antiRollVal = 8000f;
+        [SerializeField] private float _downForce = 200f;
+        [SerializeField, Range(0, 1)] private float _steerHelper = 0.3f; 
+        [SerializeField, Range(0, 1)] private float _tractionControl = 0.8f; 
 
-        // New variables for handling no gasoline scenario
-        [SerializeField] private float _slowdownRate = 5f;
+        [SerializeField] private float _steeringSensitivity = 1f;
+        [SerializeField] private float _maxSteerVelocity = 2f;
+        [SerializeField] private AnimationCurve _speedSteerCurve = AnimationCurve.Linear(0, 1, 100, 0.3f);
+        [SerializeField] private float _stabilityForce = 1000f;
+        [SerializeField] private float _emergencyBrakeMultiplier = 2f;
+
+        [SerializeField] private float _slowdownRate = 2f;
         private bool _stopCar = false;
         private float _slowdownFactor = 1f;
 
@@ -46,6 +51,7 @@ namespace CarControllerwithShooting
 
         private Quaternion[] _wheelMeshLocalRotations;
         private float _steerAngle;
+        private float _targetSteerAngle;
         private int _gearNum;
         private float _gearFactor;
         private float _oldRotation;
@@ -76,12 +82,46 @@ namespace CarControllerwithShooting
                 _wheelMeshLocalRotations[i] = _wheelMeshes[i].transform.localRotation;
             }
 
-
             _maxHandbrakeTorque = float.MaxValue;
             _rigidbody = GetComponent<Rigidbody>();
             _currentTorque = _fullTorqueOverAllWheels - (_tractionControl * _fullTorqueOverAllWheels);
             _rigidbody.centerOfMass += _centerOfMassOffset;
             _emissionPropertyId = Shader.PropertyToID("_EmissionColor");
+
+            SetupWheelColliders();
+        }
+
+        private void SetupWheelColliders()
+        {
+            foreach (var wheel in wheelColliders)
+            {
+                WheelFrictionCurve forwardFriction = wheel.forwardFriction;
+                WheelFrictionCurve sidewaysFriction = wheel.sidewaysFriction;
+
+                forwardFriction.extremumSlip = 0.4f;
+                forwardFriction.extremumValue = 1.2f;
+                forwardFriction.asymptoteSlip = 0.8f;
+                forwardFriction.asymptoteValue = 1.0f;
+                forwardFriction.stiffness = 2f;
+
+                sidewaysFriction.extremumSlip = 0.25f;
+                sidewaysFriction.extremumValue = 1.3f;
+                sidewaysFriction.asymptoteSlip = 0.5f;
+                sidewaysFriction.asymptoteValue = 1.1f;
+                sidewaysFriction.stiffness = 2.5f;
+
+                wheel.forwardFriction = forwardFriction;
+                wheel.sidewaysFriction = sidewaysFriction;
+
+                JointSpring suspensionSpring = wheel.suspensionSpring;
+                suspensionSpring.spring = 35000f;
+                suspensionSpring.damper = 4500f;
+                suspensionSpring.targetPosition = 0.5f;
+                wheel.suspensionSpring = suspensionSpring;
+
+                wheel.suspensionDistance = 0.3f;
+                wheel.forceAppPointDistance = 0f;
+            }
         }
 
         private void GearChanging()
@@ -132,7 +172,6 @@ namespace CarControllerwithShooting
         private void CalculateGearFactor()
         {
             float f = (1 / (float)NumberOfGears);
-
             float targetGearFactor = Mathf.InverseLerp(f * _gearNum, f * (_gearNum + 1), Mathf.Abs(CurrentSpeed / MaxSpeed));
             _gearFactor = Mathf.Lerp(_gearFactor, targetGearFactor, Time.deltaTime * 5.0f);
         }
@@ -184,20 +223,19 @@ namespace CarControllerwithShooting
             Debug.Log("Exploded!");
             GameCanvas.Instance.Hide_GameUI();
         }
+
         Vector2 input;
         float footBrake;
 
         [HideInInspector]
         public float handBrake;
 
-        // Check gasoline level and handle out of gas condition
         private void Update()
         {
             // Check if we've just run out of gas
             if (!_stopCar && Gasoline.Instance.CurrentFuel <= 0)
             {
                 _stopCar = true;
-                //GameCanvas.Instance.Show_OutOfGasMessage();
             }
         }
 
@@ -220,7 +258,6 @@ namespace CarControllerwithShooting
             {
                 input = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
                 footBrake = Input.GetAxis("Vertical");
-                //handBrake = Input.GetKey(KeyCode.Space) ? 1 : 0;
             }
             else
             {
@@ -243,12 +280,10 @@ namespace CarControllerwithShooting
             BrakeInput = footBrake = -1 * Mathf.Clamp(footBrake, -1, 0);
             handBrake = Mathf.Clamp(handBrake, 0, 1);
 
-            _steerAngle = steering * _currentMaxSteerAngle;
-            wheelColliders[0].steerAngle = _steerAngle;
-            wheelColliders[1].steerAngle = _steerAngle;
-
+            ApplySteering(steering);
             SteerHelper();
             ApplyDrive(accel, footBrake);
+            ApplyStabilityForces();
             CapSpeed();
 
             if (handBrake > 0f)
@@ -270,49 +305,80 @@ namespace CarControllerwithShooting
             CheckForWheelSpin();
             TractionControl();
             AntiRoll();
-            SetSteerAngle();
+            UpdateSteerAngle();
         }
 
-        // New method to handle out of gas scenario
+        private void ApplySteering(float steeringInput)
+        {
+            float speedFactor = _speedSteerCurve.Evaluate(CurrentSpeed);
+            float sensitivityAdjustedInput = steeringInput * _steeringSensitivity * speedFactor;
+
+            _targetSteerAngle = sensitivityAdjustedInput * _currentMaxSteerAngle;
+
+            // Smooth steering interpolation to prevent jerky movements
+            _steerAngle = Mathf.MoveTowards(_steerAngle, _targetSteerAngle, _maxSteerVelocity * Time.deltaTime * _currentMaxSteerAngle);
+
+            wheelColliders[0].steerAngle = _steerAngle;
+            wheelColliders[1].steerAngle = _steerAngle;
+        }
+
+        private void ApplyStabilityForces()
+        {
+            Vector3 velocity = _rigidbody.linearVelocity;
+            Vector3 forward = transform.forward;
+            Vector3 right = transform.right;
+
+            float sideSlip = Vector3.Dot(velocity, right);
+
+            if (Mathf.Abs(sideSlip) > 0.5f)
+            {
+                Vector3 counterForce = -right * sideSlip * _stabilityForce * Time.deltaTime;
+                _rigidbody.AddForce(counterForce);
+            }
+
+            Vector3 angularVel = _rigidbody.angularVelocity;
+            if (angularVel.magnitude > 3f)
+            {
+                _rigidbody.angularVelocity = angularVel.normalized * 3f;
+            }
+        }
+
         private void StopCarSmoothly()
         {
-            // Apply gradual slowdown
-            if (CurrentSpeed > 0.5f)
+            if (CurrentSpeed > 0.1f)
             {
-                // Gradually reduce speed
-                _slowdownFactor = Mathf.Clamp01(_slowdownFactor - Time.deltaTime / _slowdownRate);
-
-                // Apply gentle braking to all wheels
-                float slowBrakeTorque = _brakeTorque * 0.3f;
+                float emergencyBrakeTorque = _brakeTorque * _emergencyBrakeMultiplier;
                 for (int i = 0; i < 4; i++)
                 {
                     wheelColliders[i].motorTorque = 0;
-                    wheelColliders[i].brakeTorque = slowBrakeTorque;
+                    wheelColliders[i].brakeTorque = emergencyBrakeTorque;
                 }
 
                 TurnBrakeLightsOn();
             }
             else
             {
-                // When nearly stopped, apply full brakes to prevent rolling
                 for (int i = 0; i < 4; i++)
                 {
                     wheelColliders[i].motorTorque = 0;
-                    wheelColliders[i].brakeTorque = _brakeTorque;
+                    wheelColliders[i].brakeTorque = _brakeTorque * 3f;
                 }
 
-                // Light handling for completely stopped vehicle
                 TurnBrakeLightsOff();
+
+                if (_rigidbody.linearVelocity.magnitude < 0.1f)
+                {
+                    _rigidbody.linearVelocity = Vector3.zero;
+                    _rigidbody.angularVelocity = Vector3.zero;
+                }
             }
 
-            // Still update wheel visuals
             for (int i = 0; i < 4; i++)
             {
                 wheelColliders[i].GetWorldPose(out Vector3 position, out Quaternion quat);
                 _wheelMeshes[i].transform.SetPositionAndRotation(position, quat);
             }
 
-            // Update speed display
             GameCanvas.Instance.Update_Text_Speed();
         }
 
@@ -329,19 +395,17 @@ namespace CarControllerwithShooting
 
         private void ApplyDrive(float accel, float footBrake)
         {
-            float thrustTorque;
-            thrustTorque = accel * (_currentTorque / 4f);
+            float thrustTorque = accel * (_currentTorque / 4f);
 
-            // Check if there's enough gasoline to apply thrust
             if (Gasoline.Instance.CurrentFuel > 0)
             {
                 for (int i = 0; i < 4; i++)
                 {
                     wheelColliders[i].motorTorque = thrustTorque;
                 }
-                // Consume fuel based on thrust
+
                 Gasoline.Instance.CurrentFuel = Gasoline.Instance.CurrentFuel - thrustTorque * Time.deltaTime * Gasoline.Instance.FuelConsumptionRate;
-                // Ensure fuel doesn't go below zero
+
                 if (Gasoline.Instance.CurrentFuel < 0)
                 {
                     Gasoline.Instance.CurrentFuel = 0;
@@ -349,7 +413,6 @@ namespace CarControllerwithShooting
             }
             else
             {
-                // No gasoline left, no thrust applied
                 for (int i = 0; i < 4; i++)
                 {
                     wheelColliders[i].motorTorque = 0;
@@ -456,12 +519,14 @@ namespace CarControllerwithShooting
 
         private void CheckForWheelSpin()
         {
+            Skidding = false;
             for (int i = 0; i < 4; i++)
             {
                 wheelColliders[i].GetGroundHit(out WheelHit wheelHit);
 
                 if (Mathf.Abs(wheelHit.forwardSlip) >= _slipLimit || Mathf.Abs(wheelHit.sidewaysSlip) >= _slipLimit)
                 {
+                    Skidding = true;
                     _wheelEffects[i].EmitTireSmoke();
 
                     if (!AnySkidSoundPlaying())
@@ -480,10 +545,9 @@ namespace CarControllerwithShooting
 
         void TractionControl()
         {
-            WheelHit wheelHit;
             for (int i = 0; i < 4; i++)
             {
-                wheelColliders[i].GetGroundHit(out wheelHit);
+                wheelColliders[i].GetGroundHit(out WheelHit wheelHit);
                 AdjustTorque(wheelHit.forwardSlip);
             }
         }
@@ -492,11 +556,11 @@ namespace CarControllerwithShooting
         {
             if (forwardSlip >= _slipLimit && _currentTorque >= 0)
             {
-                _currentTorque -= 10 * _tractionControl;
+                _currentTorque -= 15 * _tractionControl;
             }
             else
             {
-                _currentTorque += 10 * _tractionControl;
+                _currentTorque += 15 * _tractionControl;
                 if (_currentTorque > _fullTorqueOverAllWheels)
                 {
                     _currentTorque = _fullTorqueOverAllWheels;
@@ -542,19 +606,23 @@ namespace CarControllerwithShooting
             _reverseLightMeshRenderer.material.SetColor(_emissionPropertyId, Color.black);
         }
 
-        private void SetSteerAngle()
+        private void UpdateSteerAngle()
         {
+            float speedBasedReduction = CurrentSpeed / 100f;
+
             if (CurrentSpeed < 25f)
             {
-                _currentMaxSteerAngle = Mathf.MoveTowards(_currentMaxSteerAngle, _maximumSteerAngle, 0.5f);
+                _currentMaxSteerAngle = Mathf.MoveTowards(_currentMaxSteerAngle, _maximumSteerAngle, 1f);
             }
-            else if (CurrentSpeed > 25f && CurrentSpeed < 60f)
+            else if (CurrentSpeed < 60f)
             {
-                _currentMaxSteerAngle = Mathf.MoveTowards(_currentMaxSteerAngle, _maximumSteerAngle / 1.5f, 0.5f);
+                float targetAngle = _maximumSteerAngle * (1f - speedBasedReduction * 0.3f);
+                _currentMaxSteerAngle = Mathf.MoveTowards(_currentMaxSteerAngle, targetAngle, 1f);
             }
-            else if (CurrentSpeed > 60)
+            else
             {
-                _currentMaxSteerAngle = Mathf.MoveTowards(_currentMaxSteerAngle, _maximumSteerAngle / 2f, 0.5f);
+                float targetAngle = _maximumSteerAngle * (1f - speedBasedReduction * 0.5f);
+                _currentMaxSteerAngle = Mathf.MoveTowards(_currentMaxSteerAngle, targetAngle, 1f);
             }
         }
 

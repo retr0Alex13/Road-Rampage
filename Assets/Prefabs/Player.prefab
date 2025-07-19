@@ -970,6 +970,73 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7989394185310083793}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &8030492293476130666
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4546428764415802048}
+  - component: {fileID: 8413720262416795837}
+  - component: {fileID: 5115105840521017996}
+  m_Layer: 0
+  m_Name: ForwardFlipCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4546428764415802048
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8030492293476130666}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0.666, z: 3.073}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5667418517514147122}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!65 &8413720262416795837
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8030492293476130666}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.61, y: 0.1, z: 0.5}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5115105840521017996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8030492293476130666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef4ca21a42680b44a8edacc17128cab5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _carFlipper: {fileID: 5298575807978438327}
 --- !u!1 &8393521264777467791
 GameObject:
   m_ObjectHideFlags: 0
@@ -1172,11 +1239,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8834734170784175513, guid: 5c2cb823f1af59541974bd4a360355f6, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 204
+      value: 352
       objectReference: {fileID: 0}
     - target: {fileID: 8834734170784175513, guid: 5c2cb823f1af59541974bd4a360355f6, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 158
+      value: 339
       objectReference: {fileID: 0}
     - target: {fileID: 8834734170784175513, guid: 5c2cb823f1af59541974bd4a360355f6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1195,16 +1262,20 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8834734170784175514, guid: 5c2cb823f1af59541974bd4a360355f6, type: 3}
+      propertyPath: radius
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8834734170784175514, guid: 5c2cb823f1af59541974bd4a360355f6, type: 3}
       propertyPath: edgeSnap
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8834734170784175514, guid: 5c2cb823f1af59541974bd4a360355f6, type: 3}
       propertyPath: boundaries.x
-      value: -69.39932
+      value: -20.167358
       objectReference: {fileID: 0}
     - target: {fileID: 8834734170784175514, guid: 5c2cb823f1af59541974bd4a360355f6, type: 3}
       propertyPath: boundaries.y
-      value: -93.21124
+      value: -16.286346
       objectReference: {fileID: 0}
     - target: {fileID: 8834734170784175514, guid: 5c2cb823f1af59541974bd4a360355f6, type: 3}
       propertyPath: onlyOnMobile
@@ -1216,11 +1287,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8834734170784175514, guid: 5c2cb823f1af59541974bd4a360355f6, type: 3}
       propertyPath: boundaries.width
-      value: 560.33234
+      value: 511.1004
       objectReference: {fileID: 0}
     - target: {fileID: 8834734170784175514, guid: 5c2cb823f1af59541974bd4a360355f6, type: 3}
       propertyPath: boundaries.height
-      value: 497.4495
+      value: 420.5246
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1760,6 +1831,10 @@ PrefabInstance:
       propertyPath: PlayerTarget
       value: 
       objectReference: {fileID: 5667418517514147122}
+    - target: {fileID: 4039674411819076346, guid: 1756185df46214db68020ea01f5f337f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4039674411819076347, guid: 1756185df46214db68020ea01f5f337f, type: 3}
       propertyPath: m_Pivot.y
       value: 1
@@ -2119,12 +2194,36 @@ PrefabInstance:
       value: Car
       objectReference: {fileID: 0}
     - target: {fileID: 198737313120763601, guid: 0aca9bb2e5c9c4145bf0d89014822e93, type: 3}
+      propertyPath: _downForce
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 198737313120763601, guid: 0aca9bb2e5c9c4145bf0d89014822e93, type: 3}
+      propertyPath: _slipLimit
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 198737313120763601, guid: 0aca9bb2e5c9c4145bf0d89014822e93, type: 3}
+      propertyPath: _antiRollVal
+      value: 8000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198737313120763601, guid: 0aca9bb2e5c9c4145bf0d89014822e93, type: 3}
+      propertyPath: _brakeTorque
+      value: 15000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198737313120763601, guid: 0aca9bb2e5c9c4145bf0d89014822e93, type: 3}
+      propertyPath: _steerHelper
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 198737313120763601, guid: 0aca9bb2e5c9c4145bf0d89014822e93, type: 3}
       propertyPath: virtualJoystick
       value: 
       objectReference: {fileID: 8755368574593008441}
     - target: {fileID: 198737313120763601, guid: 0aca9bb2e5c9c4145bf0d89014822e93, type: 3}
       propertyPath: _tractionControl
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198737313120763601, guid: 0aca9bb2e5c9c4145bf0d89014822e93, type: 3}
+      propertyPath: _maximumSteerAngle
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 198737313120763601, guid: 0aca9bb2e5c9c4145bf0d89014822e93, type: 3}
       propertyPath: _fullTorqueOverAllWheels
@@ -2151,6 +2250,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 198737313120763426, guid: 0aca9bb2e5c9c4145bf0d89014822e93, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5620559635561962588}
+    - targetCorrespondingSourceObject: {fileID: 198737313120763426, guid: 0aca9bb2e5c9c4145bf0d89014822e93, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4546428764415802048}
     - targetCorrespondingSourceObject: {fileID: 198737313120763426, guid: 0aca9bb2e5c9c4145bf0d89014822e93, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8568484679005737812}
