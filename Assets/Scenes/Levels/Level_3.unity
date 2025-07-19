@@ -9408,6 +9408,10 @@ PrefabInstance:
       propertyPath: CurrentFuel
       value: 70
       objectReference: {fileID: 0}
+    - target: {fileID: 3982288130899196518, guid: 558180c27ef6cbd4fad4d9ff9a381973, type: 3}
+      propertyPath: Target
+      value: 
+      objectReference: {fileID: 2064299268}
     - target: {fileID: 5667418517514147124, guid: 558180c27ef6cbd4fad4d9ff9a381973, type: 3}
       propertyPath: Ammo_Missile
       value: 25
@@ -9433,6 +9437,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 558180c27ef6cbd4fad4d9ff9a381973, type: 3}
+--- !u!4 &2064299268 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5667418518298002681, guid: 558180c27ef6cbd4fad4d9ff9a381973, type: 3}
+  m_PrefabInstance: {fileID: 2064299267}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2072571896
 GameObject:
   m_ObjectHideFlags: 0

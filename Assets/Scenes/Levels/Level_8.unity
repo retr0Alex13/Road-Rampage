@@ -17596,6 +17596,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3982288130899196518, guid: 558180c27ef6cbd4fad4d9ff9a381973, type: 3}
+      propertyPath: Target
+      value: 
+      objectReference: {fileID: 1981682532}
     - target: {fileID: 5667418517514147124, guid: 558180c27ef6cbd4fad4d9ff9a381973, type: 3}
       propertyPath: Ammo_Missile
       value: 15
@@ -17649,6 +17653,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 558180c27ef6cbd4fad4d9ff9a381973, type: 3}
+--- !u!4 &1981682532 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5667418518298002681, guid: 558180c27ef6cbd4fad4d9ff9a381973, type: 3}
+  m_PrefabInstance: {fileID: 1981682531}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1988608823
 PrefabInstance:
   m_ObjectHideFlags: 0
