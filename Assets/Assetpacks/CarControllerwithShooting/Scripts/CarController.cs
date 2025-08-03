@@ -174,11 +174,6 @@ namespace CarControllerwithShooting
 
         void ExplodeCar()
         {
-            if (CarSystemManager.Instance.cameraFPS.activeSelf)
-            {
-                CarSystemManager.Instance.cameraFPS.SetActive(false);
-                CarSystemManager.Instance.cameraTPS.SetActive(true);
-            }
             Instantiate(ExplosionParticle, transform.position, Quaternion.identity);
             Destroy(gameObject, 0.2f);
             Debug.Log("Exploded!");

@@ -100,7 +100,6 @@ namespace CarControllerwithShooting
                 leftClickButton.gameObject.SetActive(true);
                 rightClickButton.gameObject.SetActive(true);
             }
-            //button_CameraChange.GetComponentInChildren<Text>().text = "Camera (C)";
         }
 
         public void Click_ButtonPause()
@@ -211,23 +210,6 @@ namespace CarControllerwithShooting
             PokiUnitySDK.Instance.gameplayStop();
         }
 
-        public void Click_Button_CameraSwitch()
-        {
-            //if (button_CameraChange.IsInteractable())
-            //{
-            //    if (CarSystemManager.Instance.cameraFPS != null && CarSystemManager.Instance.cameraFPS.activeSelf)
-            //    {
-            //        CarSystemManager.Instance.cameraFPS.SetActive(false);
-            //        CarSystemManager.Instance.cameraTPS.SetActive(true);
-            //    }
-            //    else if (CarSystemManager.Instance.cameraTPS != null)
-            //    {
-            //        CarSystemManager.Instance.cameraFPS.SetActive(true);
-            //        CarSystemManager.Instance.cameraTPS.SetActive(false);
-            //    }
-            //}
-        }
-
         private void Update()
         {
             if (!anyKeyPressed && (Input.anyKeyDown || Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0))
@@ -237,10 +219,6 @@ namespace CarControllerwithShooting
                 anyKeyPressed = true;
             }
 
-            if (Input.GetKeyUp(KeyCode.C) && CarSystemManager.Instance.controllerType == ControllerType.KeyboardMouse)
-            {
-                Click_Button_CameraSwitch();
-            }
             if (Input.GetKeyDown(KeyCode.Escape) && CarSystemManager.Instance.controllerType == ControllerType.KeyboardMouse)
             {
                 if(Panel_Settings.activeSelf)

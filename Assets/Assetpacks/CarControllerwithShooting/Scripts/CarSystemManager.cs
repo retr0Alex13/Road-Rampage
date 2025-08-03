@@ -5,11 +5,9 @@ namespace CarControllerwithShooting
     public class CarSystemManager : MonoBehaviour
     {
         public ControllerType controllerType;
-        public CameraType cameraType;
         public bool ShowRadar = true;
 
-        public GameObject cameraFPS;
-        public GameObject cameraTPS;
+        public GameObject mainCamera;
         public static CarSystemManager Instance;
 
         public bool isWeaponsActive = true;
@@ -48,17 +46,6 @@ namespace CarControllerwithShooting
             {
                 GameCanvas.Instance.Configure_For_Mobile();
             }
-
-            if (cameraType == CameraType.Interior_FPS)
-            {
-                cameraFPS.SetActive(true);
-                cameraTPS.SetActive(false);
-            }
-            else if (cameraType == CameraType.Outdoor_TPS)
-            {
-                cameraFPS.SetActive(false);
-                cameraTPS.SetActive(true);
-            }
             if (!isWeaponsActive)
             {
                 GunController.Instance.DeactivateWeapons();
@@ -67,14 +54,7 @@ namespace CarControllerwithShooting
 
         public Transform GetCamera()
         {
-            if (cameraType == CameraType.Interior_FPS)
-            {
-                return cameraFPS.transform;
-            }
-            else
-            {
-                return cameraTPS.transform;
-            }
+            return mainCamera.transform;
         }
     }
 
@@ -82,11 +62,5 @@ namespace CarControllerwithShooting
     {
         KeyboardMouse,
         Mobile
-    }
-
-    public enum CameraType
-    {
-        Interior_FPS,
-        Outdoor_TPS
     }
 }
