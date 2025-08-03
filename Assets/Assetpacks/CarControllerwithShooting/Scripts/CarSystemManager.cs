@@ -8,6 +8,7 @@ namespace CarControllerwithShooting
         public bool ShowRadar = true;
 
         public GameObject mainCamera;
+        public GameObject car;
         public static CarSystemManager Instance;
 
         public bool isWeaponsActive = true;

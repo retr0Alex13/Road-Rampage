@@ -2090,6 +2090,10 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8211691756694134650, guid: 9f5813cb7936b49c2b815fa47c59327b, type: 3}
+      propertyPath: screenShaker
+      value: 
+      objectReference: {fileID: 1257033255}
+    - target: {fileID: 8211691756694134650, guid: 9f5813cb7936b49c2b815fa47c59327b, type: 3}
       propertyPath: PatrollingPoints.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -4890,6 +4894,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8211691756694134650, guid: 9f5813cb7936b49c2b815fa47c59327b, type: 3}
+      propertyPath: screenShaker
+      value: 
+      objectReference: {fileID: 1257033255}
+    - target: {fileID: 8211691756694134650, guid: 9f5813cb7936b49c2b815fa47c59327b, type: 3}
       propertyPath: DecisionPeriod
       value: 15
       objectReference: {fileID: 0}
@@ -5168,6 +5176,10 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8211691756694134650, guid: 9f5813cb7936b49c2b815fa47c59327b, type: 3}
+      propertyPath: screenShaker
+      value: 
+      objectReference: {fileID: 1257033255}
+    - target: {fileID: 8211691756694134650, guid: 9f5813cb7936b49c2b815fa47c59327b, type: 3}
       propertyPath: DecisionPeriod
       value: 15
       objectReference: {fileID: 0}
@@ -5343,6 +5355,10 @@ PrefabInstance:
       propertyPath: isPatrolling
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8211691756694134650, guid: 9f5813cb7936b49c2b815fa47c59327b, type: 3}
+      propertyPath: screenShaker
+      value: 
+      objectReference: {fileID: 1257033255}
     - target: {fileID: 8211691756694134650, guid: 9f5813cb7936b49c2b815fa47c59327b, type: 3}
       propertyPath: DecisionPeriod
       value: 15
@@ -6218,6 +6234,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5667418518298002681, guid: 558180c27ef6cbd4fad4d9ff9a381973, type: 3}
   m_PrefabInstance: {fileID: 1257033253}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1257033255 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3947993991508561429, guid: 558180c27ef6cbd4fad4d9ff9a381973, type: 3}
+  m_PrefabInstance: {fileID: 1257033253}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba97045275a905243b14be6cec23d1db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1258156444
 PrefabInstance:
   m_ObjectHideFlags: 0

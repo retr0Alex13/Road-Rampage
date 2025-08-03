@@ -258,6 +258,8 @@ GameObject:
   - component: {fileID: 4889566436997172930}
   - component: {fileID: 4283996119045198549}
   - component: {fileID: 6070954354683108613}
+  - component: {fileID: 4026783243441619739}
+  - component: {fileID: 3947993991508561429}
   m_Layer: 0
   m_Name: Third Person Aim Camera
   m_TagString: Untagged
@@ -367,6 +369,41 @@ MonoBehaviour:
   IgnoreTag: 
   AimDistance: 200
   NoiseCancellation: 1
+--- !u!114 &4026783243441619739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2371885732899131660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68bb026fafb42b14791938953eaace77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NoiseProfile: {fileID: 0}
+  PivotOffset: {x: 0, y: 0, z: 0}
+  AmplitudeGain: 1
+  FrequencyGain: 1
+  m_NoiseOffsets: {x: 0, y: 0, z: 0}
+--- !u!114 &3947993991508561429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2371885732899131660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba97045275a905243b14be6cec23d1db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cinemachineMultiChannelPerlin: {fileID: 4026783243441619739}
+  noiseProfile: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
+  maxDistance: 90
+  minDistance: 20
+  maxAmplitude: 5
+  maxFrequency: 5
 --- !u!1 &2994248652165435415
 GameObject:
   m_ObjectHideFlags: 0
@@ -1155,6 +1192,7 @@ MonoBehaviour:
   controllerType: 0
   ShowRadar: 1
   mainCamera: {fileID: 3982288130189612469}
+  car: {fileID: 5667418517514147134}
   isWeaponsActive: 1
 --- !u!1 &7780356588373206897
 GameObject:

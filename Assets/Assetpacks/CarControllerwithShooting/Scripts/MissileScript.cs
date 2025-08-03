@@ -1,4 +1,6 @@
+using System;
 using UnityEngine;
+using Voidwalker;
 
 namespace CarControllerwithShooting
 {
@@ -8,6 +10,7 @@ namespace CarControllerwithShooting
         public int DamagePower = 25;
         public Transform particle_following;
         public bool isEnemyMissile = false;
+        public ScreenShaker screenShaker;
 
         private void OnCollisionEnter(Collision collision)
         {
@@ -19,6 +22,7 @@ namespace CarControllerwithShooting
                     CarController.Instance.GetDamage(DamagePower);
                 }
                 Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+                screenShaker.StartShake(transform.position);
                 if (particle_following != null)
                 {
                     particle_following.parent = null;

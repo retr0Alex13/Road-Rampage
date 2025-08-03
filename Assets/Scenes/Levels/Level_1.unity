@@ -530,6 +530,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8211691756694134650, guid: 9f5813cb7936b49c2b815fa47c59327b, type: 3}
+      propertyPath: screenShaker
+      value: 
+      objectReference: {fileID: 691503162}
+    - target: {fileID: 8211691756694134650, guid: 9f5813cb7936b49c2b815fa47c59327b, type: 3}
       propertyPath: DecisionPeriod
       value: 10
       objectReference: {fileID: 0}
@@ -894,6 +898,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3607131848594861169, guid: 54f93a021402e4c0a937b52efa06fb09, type: 3}
   m_PrefabInstance: {fileID: 682298355}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &691503162 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3947993991508561429, guid: 558180c27ef6cbd4fad4d9ff9a381973, type: 3}
+  m_PrefabInstance: {fileID: 3118000691556309387}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba97045275a905243b14be6cec23d1db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &694746957
 PrefabInstance:
   m_ObjectHideFlags: 0

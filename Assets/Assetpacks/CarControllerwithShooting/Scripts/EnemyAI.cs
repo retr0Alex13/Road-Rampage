@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using Voidwalker;
 
 namespace CarControllerwithShooting
 {
@@ -18,6 +19,7 @@ namespace CarControllerwithShooting
         public GameObject SpritePointer;
         public GameObject ExplosionEffect;
         public Collider MainCollider;
+        public ScreenShaker screenShaker;
 
         public Collider[] colliders;
         public List<Transform> PatrollingPoints;
@@ -100,6 +102,7 @@ namespace CarControllerwithShooting
                 // Helicopter is in Range!
                 LastFiring_Time = Time.time;
                 GameObject enemyMissile = Instantiate(EnemyMissile, Firing_Point.position, Quaternion.identity);
+                enemyMissile.GetComponent<MissileScript>().screenShaker = screenShaker;
                 Vector3 targettoShoot = new Vector3(CarController.Instance.transform.position.x + Random.Range(-1 * (10 - Accuracy), (10 - Accuracy)), CarController.Instance.transform.position.y + 1.5f + Random.Range(-1 * (10 - Accuracy), (10 - Accuracy)), CarController.Instance.transform.position.z + Random.Range(-1 * (10 - Accuracy), (10 - Accuracy)));
                 enemyMissile.transform.LookAt(targettoShoot);
                 enemyMissile.GetComponentInChildren<Rigidbody>().AddForce(enemyMissile.transform.forward * 140, ForceMode.Impulse);
