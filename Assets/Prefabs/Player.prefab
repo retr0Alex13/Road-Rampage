@@ -400,6 +400,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cinemachineMultiChannelPerlin: {fileID: 4026783243441619739}
   noiseProfile: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
+  screenShakeDuration: 0.3
   maxDistance: 90
   minDistance: 20
   maxAmplitude: 5
@@ -2281,6 +2282,10 @@ PrefabInstance:
       propertyPath: Ammo_Missile
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 198737313120763428, guid: 0aca9bb2e5c9c4145bf0d89014822e93, type: 3}
+      propertyPath: screenShaker
+      value: 
+      objectReference: {fileID: 3947993991508561429}
     - target: {fileID: 198737313120763428, guid: 0aca9bb2e5c9c4145bf0d89014822e93, type: 3}
       propertyPath: Ammo_Machinegun
       value: 0

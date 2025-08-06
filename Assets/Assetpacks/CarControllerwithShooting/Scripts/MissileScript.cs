@@ -22,7 +22,9 @@ namespace CarControllerwithShooting
                     CarController.Instance.GetDamage(DamagePower);
                 }
                 Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+
                 screenShaker.StartShake(transform.position);
+
                 if (particle_following != null)
                 {
                     particle_following.parent = null;
@@ -68,6 +70,9 @@ namespace CarControllerwithShooting
                     }
                 }
                 Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+
+                screenShaker.StartShake(transform.position);
+
                 if (particle_following != null)
                 {
                     particle_following.parent = null;

@@ -443,16 +443,47 @@ PrefabInstance:
       propertyPath: m_Name
       value: Explosive Barrel_9
       objectReference: {fileID: 0}
+    - target: {fileID: 4959107606612291164, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+      propertyPath: screenShaker
+      value: 
+      objectReference: {fileID: 77353996}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 643677464676224115, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 77353996}
   m_SourcePrefab: {fileID: 100100000, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
 --- !u!4 &77353994 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 529051730854651358, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
   m_PrefabInstance: {fileID: 77353993}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &77353995 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 643677464676224115, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+  m_PrefabInstance: {fileID: 77353993}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &77353996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 77353995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba97045275a905243b14be6cec23d1db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cinemachineMultiChannelPerlin: {fileID: 91045326}
+  noiseProfile: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
+  screenShakeDuration: 0.3
+  maxDistance: 90
+  minDistance: 10
+  maxAmplitude: 5
+  maxFrequency: 5
 --- !u!1001 &91045323
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -564,6 +595,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ba97045275a905243b14be6cec23d1db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &91045326 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4026783243441619739, guid: 558180c27ef6cbd4fad4d9ff9a381973, type: 3}
+  m_PrefabInstance: {fileID: 91045323}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68bb026fafb42b14791938953eaace77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &107896225
@@ -704,16 +746,47 @@ PrefabInstance:
       propertyPath: m_Name
       value: Explosive Barrel_16
       objectReference: {fileID: 0}
+    - target: {fileID: 4959107606612291164, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+      propertyPath: screenShaker
+      value: 
+      objectReference: {fileID: 109803921}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 643677464676224115, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 109803921}
   m_SourcePrefab: {fileID: 100100000, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
 --- !u!4 &109803919 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 529051730854651358, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
   m_PrefabInstance: {fileID: 109803918}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &109803920 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 643677464676224115, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+  m_PrefabInstance: {fileID: 109803918}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &109803921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 109803920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba97045275a905243b14be6cec23d1db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cinemachineMultiChannelPerlin: {fileID: 91045326}
+  noiseProfile: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
+  screenShakeDuration: 0.3
+  maxDistance: 90
+  minDistance: 10
+  maxAmplitude: 5
+  maxFrequency: 5
 --- !u!1001 &116055738
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -766,16 +839,47 @@ PrefabInstance:
       propertyPath: m_Name
       value: Explosive Barrel_8
       objectReference: {fileID: 0}
+    - target: {fileID: 4959107606612291164, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+      propertyPath: screenShaker
+      value: 
+      objectReference: {fileID: 116055741}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 643677464676224115, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 116055741}
   m_SourcePrefab: {fileID: 100100000, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
 --- !u!4 &116055739 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 529051730854651358, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
   m_PrefabInstance: {fileID: 116055738}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &116055740 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 643677464676224115, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+  m_PrefabInstance: {fileID: 116055738}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &116055741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 116055740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba97045275a905243b14be6cec23d1db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cinemachineMultiChannelPerlin: {fileID: 91045326}
+  noiseProfile: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
+  screenShakeDuration: 0.3
+  maxDistance: 90
+  minDistance: 10
+  maxAmplitude: 5
+  maxFrequency: 5
 --- !u!1001 &128429967
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -828,16 +932,47 @@ PrefabInstance:
       propertyPath: m_Name
       value: Explosive Barrel_27
       objectReference: {fileID: 0}
+    - target: {fileID: 4959107606612291164, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+      propertyPath: screenShaker
+      value: 
+      objectReference: {fileID: 128429970}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 643677464676224115, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 128429970}
   m_SourcePrefab: {fileID: 100100000, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
 --- !u!4 &128429968 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 529051730854651358, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
   m_PrefabInstance: {fileID: 128429967}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &128429969 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 643677464676224115, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+  m_PrefabInstance: {fileID: 128429967}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &128429970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128429969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba97045275a905243b14be6cec23d1db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cinemachineMultiChannelPerlin: {fileID: 91045326}
+  noiseProfile: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
+  screenShakeDuration: 0.3
+  maxDistance: 90
+  minDistance: 10
+  maxAmplitude: 5
+  maxFrequency: 5
 --- !u!1001 &129548073
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1084,16 +1219,47 @@ PrefabInstance:
       propertyPath: m_Name
       value: Explosive Barrel_18
       objectReference: {fileID: 0}
+    - target: {fileID: 4959107606612291164, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+      propertyPath: screenShaker
+      value: 
+      objectReference: {fileID: 173943234}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 643677464676224115, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 173943234}
   m_SourcePrefab: {fileID: 100100000, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
 --- !u!4 &173943232 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 529051730854651358, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
   m_PrefabInstance: {fileID: 173943231}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &173943233 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 643677464676224115, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+  m_PrefabInstance: {fileID: 173943231}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &173943234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 173943233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba97045275a905243b14be6cec23d1db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cinemachineMultiChannelPerlin: {fileID: 91045326}
+  noiseProfile: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
+  screenShakeDuration: 0.3
+  maxDistance: 90
+  minDistance: 10
+  maxAmplitude: 5
+  maxFrequency: 5
 --- !u!1001 &259572509
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1217,16 +1383,47 @@ PrefabInstance:
       propertyPath: m_Name
       value: Explosive Barrel_12
       objectReference: {fileID: 0}
+    - target: {fileID: 4959107606612291164, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+      propertyPath: screenShaker
+      value: 
+      objectReference: {fileID: 329514280}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 643677464676224115, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 329514280}
   m_SourcePrefab: {fileID: 100100000, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
 --- !u!4 &329514278 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 529051730854651358, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
   m_PrefabInstance: {fileID: 329514277}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &329514279 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 643677464676224115, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+  m_PrefabInstance: {fileID: 329514277}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &329514280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 329514279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba97045275a905243b14be6cec23d1db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cinemachineMultiChannelPerlin: {fileID: 91045326}
+  noiseProfile: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
+  screenShakeDuration: 0.3
+  maxDistance: 90
+  minDistance: 10
+  maxAmplitude: 5
+  maxFrequency: 5
 --- !u!1 &345094211
 GameObject:
   m_ObjectHideFlags: 0
@@ -1327,16 +1524,47 @@ PrefabInstance:
       propertyPath: m_Name
       value: Explosive Barrel_17
       objectReference: {fileID: 0}
+    - target: {fileID: 4959107606612291164, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+      propertyPath: screenShaker
+      value: 
+      objectReference: {fileID: 354951115}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 643677464676224115, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 354951115}
   m_SourcePrefab: {fileID: 100100000, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
 --- !u!4 &354951113 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 529051730854651358, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
   m_PrefabInstance: {fileID: 354951112}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &354951114 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 643677464676224115, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+  m_PrefabInstance: {fileID: 354951112}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &354951115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 354951114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba97045275a905243b14be6cec23d1db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cinemachineMultiChannelPerlin: {fileID: 91045326}
+  noiseProfile: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
+  screenShakeDuration: 0.3
+  maxDistance: 90
+  minDistance: 10
+  maxAmplitude: 5
+  maxFrequency: 5
 --- !u!1 &378753676
 GameObject:
   m_ObjectHideFlags: 0
@@ -1583,16 +1811,47 @@ PrefabInstance:
       propertyPath: m_Name
       value: Explosive Barrel_24
       objectReference: {fileID: 0}
+    - target: {fileID: 4959107606612291164, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+      propertyPath: screenShaker
+      value: 
+      objectReference: {fileID: 396741218}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 643677464676224115, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 396741218}
   m_SourcePrefab: {fileID: 100100000, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
 --- !u!4 &396741216 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 529051730854651358, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
   m_PrefabInstance: {fileID: 396741215}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &396741217 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 643677464676224115, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+  m_PrefabInstance: {fileID: 396741215}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &396741218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 396741217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba97045275a905243b14be6cec23d1db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cinemachineMultiChannelPerlin: {fileID: 91045326}
+  noiseProfile: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
+  screenShakeDuration: 0.3
+  maxDistance: 90
+  minDistance: 10
+  maxAmplitude: 5
+  maxFrequency: 5
 --- !u!1001 &398744100
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2350,16 +2609,47 @@ PrefabInstance:
       propertyPath: m_Name
       value: Explosive Barrel_14
       objectReference: {fileID: 0}
+    - target: {fileID: 4959107606612291164, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+      propertyPath: screenShaker
+      value: 
+      objectReference: {fileID: 456794264}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 643677464676224115, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 456794264}
   m_SourcePrefab: {fileID: 100100000, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
 --- !u!4 &456794262 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 529051730854651358, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
   m_PrefabInstance: {fileID: 456794261}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &456794263 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 643677464676224115, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+  m_PrefabInstance: {fileID: 456794261}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &456794264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 456794263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba97045275a905243b14be6cec23d1db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cinemachineMultiChannelPerlin: {fileID: 91045326}
+  noiseProfile: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
+  screenShakeDuration: 0.3
+  maxDistance: 90
+  minDistance: 10
+  maxAmplitude: 5
+  maxFrequency: 5
 --- !u!1 &472587299
 GameObject:
   m_ObjectHideFlags: 0
@@ -2458,16 +2748,47 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4959107606612291164, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+      propertyPath: screenShaker
+      value: 
+      objectReference: {fileID: 475135018}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 643677464676224115, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 475135018}
   m_SourcePrefab: {fileID: 100100000, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
 --- !u!4 &475135016 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 529051730854651358, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
   m_PrefabInstance: {fileID: 475135015}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &475135017 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 643677464676224115, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+  m_PrefabInstance: {fileID: 475135015}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &475135018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 475135017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba97045275a905243b14be6cec23d1db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cinemachineMultiChannelPerlin: {fileID: 91045326}
+  noiseProfile: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
+  screenShakeDuration: 0.3
+  maxDistance: 90
+  minDistance: 10
+  maxAmplitude: 5
+  maxFrequency: 5
 --- !u!1001 &514323012
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2520,16 +2841,47 @@ PrefabInstance:
       propertyPath: m_Name
       value: Explosive Barrel_7
       objectReference: {fileID: 0}
+    - target: {fileID: 4959107606612291164, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+      propertyPath: screenShaker
+      value: 
+      objectReference: {fileID: 514323015}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 643677464676224115, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 514323015}
   m_SourcePrefab: {fileID: 100100000, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
 --- !u!4 &514323013 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 529051730854651358, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
   m_PrefabInstance: {fileID: 514323012}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &514323014 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 643677464676224115, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+  m_PrefabInstance: {fileID: 514323012}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &514323015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 514323014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba97045275a905243b14be6cec23d1db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cinemachineMultiChannelPerlin: {fileID: 91045326}
+  noiseProfile: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
+  screenShakeDuration: 0.3
+  maxDistance: 90
+  minDistance: 10
+  maxAmplitude: 5
+  maxFrequency: 5
 --- !u!1001 &520034326
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2582,16 +2934,47 @@ PrefabInstance:
       propertyPath: m_Name
       value: Explosive Barrel_19
       objectReference: {fileID: 0}
+    - target: {fileID: 4959107606612291164, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+      propertyPath: screenShaker
+      value: 
+      objectReference: {fileID: 520034329}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 643677464676224115, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 520034329}
   m_SourcePrefab: {fileID: 100100000, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
 --- !u!4 &520034327 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 529051730854651358, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
   m_PrefabInstance: {fileID: 520034326}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &520034328 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 643677464676224115, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+  m_PrefabInstance: {fileID: 520034326}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &520034329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 520034328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba97045275a905243b14be6cec23d1db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cinemachineMultiChannelPerlin: {fileID: 91045326}
+  noiseProfile: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
+  screenShakeDuration: 0.3
+  maxDistance: 90
+  minDistance: 10
+  maxAmplitude: 5
+  maxFrequency: 5
 --- !u!1001 &561464613
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3982,16 +4365,47 @@ PrefabInstance:
       propertyPath: m_Name
       value: Explosive Barrel_23
       objectReference: {fileID: 0}
+    - target: {fileID: 4959107606612291164, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+      propertyPath: screenShaker
+      value: 
+      objectReference: {fileID: 759485686}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 643677464676224115, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 759485686}
   m_SourcePrefab: {fileID: 100100000, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
 --- !u!4 &759485684 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 529051730854651358, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
   m_PrefabInstance: {fileID: 759485683}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &759485685 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 643677464676224115, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+  m_PrefabInstance: {fileID: 759485683}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &759485686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 759485685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba97045275a905243b14be6cec23d1db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cinemachineMultiChannelPerlin: {fileID: 91045326}
+  noiseProfile: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
+  screenShakeDuration: 0.3
+  maxDistance: 90
+  minDistance: 10
+  maxAmplitude: 5
+  maxFrequency: 5
 --- !u!1001 &795288809
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4343,16 +4757,47 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4959107606612291164, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+      propertyPath: screenShaker
+      value: 
+      objectReference: {fileID: 860072594}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 643677464676224115, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 860072594}
   m_SourcePrefab: {fileID: 100100000, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
 --- !u!4 &860072592 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 529051730854651358, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
   m_PrefabInstance: {fileID: 860072591}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &860072593 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 643677464676224115, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+  m_PrefabInstance: {fileID: 860072591}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &860072594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 860072593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba97045275a905243b14be6cec23d1db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cinemachineMultiChannelPerlin: {fileID: 91045326}
+  noiseProfile: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
+  screenShakeDuration: 0.3
+  maxDistance: 90
+  minDistance: 10
+  maxAmplitude: 5
+  maxFrequency: 5
 --- !u!1 &868025423
 GameObject:
   m_ObjectHideFlags: 0
@@ -4893,16 +5338,47 @@ PrefabInstance:
       propertyPath: m_Name
       value: Explosive Barrel_28
       objectReference: {fileID: 0}
+    - target: {fileID: 4959107606612291164, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+      propertyPath: screenShaker
+      value: 
+      objectReference: {fileID: 974100171}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 643677464676224115, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 974100171}
   m_SourcePrefab: {fileID: 100100000, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
 --- !u!4 &974100169 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 529051730854651358, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
   m_PrefabInstance: {fileID: 974100168}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &974100170 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 643677464676224115, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+  m_PrefabInstance: {fileID: 974100168}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &974100171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 974100170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba97045275a905243b14be6cec23d1db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cinemachineMultiChannelPerlin: {fileID: 91045326}
+  noiseProfile: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
+  screenShakeDuration: 0.3
+  maxDistance: 90
+  minDistance: 10
+  maxAmplitude: 5
+  maxFrequency: 5
 --- !u!1 &988242754
 GameObject:
   m_ObjectHideFlags: 0
@@ -5063,16 +5539,47 @@ PrefabInstance:
       propertyPath: m_Name
       value: Explosive Barrel_5
       objectReference: {fileID: 0}
+    - target: {fileID: 4959107606612291164, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+      propertyPath: screenShaker
+      value: 
+      objectReference: {fileID: 992349626}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 643677464676224115, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 992349626}
   m_SourcePrefab: {fileID: 100100000, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
 --- !u!4 &992349624 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 529051730854651358, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
   m_PrefabInstance: {fileID: 992349623}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &992349625 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 643677464676224115, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+  m_PrefabInstance: {fileID: 992349623}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &992349626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 992349625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba97045275a905243b14be6cec23d1db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cinemachineMultiChannelPerlin: {fileID: 91045326}
+  noiseProfile: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
+  screenShakeDuration: 0.3
+  maxDistance: 90
+  minDistance: 10
+  maxAmplitude: 5
+  maxFrequency: 5
 --- !u!1001 &1042921943
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6327,16 +6834,47 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4959107606612291164, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+      propertyPath: screenShaker
+      value: 
+      objectReference: {fileID: 1100687837}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 643677464676224115, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1100687837}
   m_SourcePrefab: {fileID: 100100000, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
 --- !u!4 &1100687835 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 529051730854651358, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
   m_PrefabInstance: {fileID: 1100687834}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1100687836 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 643677464676224115, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+  m_PrefabInstance: {fileID: 1100687834}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1100687837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1100687836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba97045275a905243b14be6cec23d1db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cinemachineMultiChannelPerlin: {fileID: 91045326}
+  noiseProfile: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
+  screenShakeDuration: 0.3
+  maxDistance: 90
+  minDistance: 10
+  maxAmplitude: 5
+  maxFrequency: 5
 --- !u!1 &1113669202
 GameObject:
   m_ObjectHideFlags: 0
@@ -6691,16 +7229,47 @@ PrefabInstance:
       propertyPath: m_Name
       value: Explosive Barrel_22
       objectReference: {fileID: 0}
+    - target: {fileID: 4959107606612291164, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+      propertyPath: screenShaker
+      value: 
+      objectReference: {fileID: 1231888832}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 643677464676224115, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1231888832}
   m_SourcePrefab: {fileID: 100100000, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
 --- !u!4 &1231888830 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 529051730854651358, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
   m_PrefabInstance: {fileID: 1231888829}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1231888831 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 643677464676224115, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+  m_PrefabInstance: {fileID: 1231888829}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1231888832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1231888831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba97045275a905243b14be6cec23d1db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cinemachineMultiChannelPerlin: {fileID: 91045326}
+  noiseProfile: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
+  screenShakeDuration: 0.3
+  maxDistance: 90
+  minDistance: 10
+  maxAmplitude: 5
+  maxFrequency: 5
 --- !u!1001 &1243321903
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7555,16 +8124,47 @@ PrefabInstance:
       propertyPath: m_Name
       value: Explosive Barrel_3
       objectReference: {fileID: 0}
+    - target: {fileID: 4959107606612291164, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+      propertyPath: screenShaker
+      value: 
+      objectReference: {fileID: 1258156447}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 643677464676224115, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1258156447}
   m_SourcePrefab: {fileID: 100100000, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
 --- !u!4 &1258156445 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 529051730854651358, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
   m_PrefabInstance: {fileID: 1258156444}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1258156446 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 643677464676224115, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+  m_PrefabInstance: {fileID: 1258156444}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1258156447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1258156446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba97045275a905243b14be6cec23d1db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cinemachineMultiChannelPerlin: {fileID: 91045326}
+  noiseProfile: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
+  screenShakeDuration: 0.3
+  maxDistance: 90
+  minDistance: 10
+  maxAmplitude: 5
+  maxFrequency: 5
 --- !u!1001 &1312402021
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7617,16 +8217,47 @@ PrefabInstance:
       propertyPath: m_Name
       value: Explosive Barrel_13
       objectReference: {fileID: 0}
+    - target: {fileID: 4959107606612291164, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+      propertyPath: screenShaker
+      value: 
+      objectReference: {fileID: 1312402024}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 643677464676224115, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1312402024}
   m_SourcePrefab: {fileID: 100100000, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
 --- !u!4 &1312402022 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 529051730854651358, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
   m_PrefabInstance: {fileID: 1312402021}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1312402023 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 643677464676224115, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+  m_PrefabInstance: {fileID: 1312402021}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1312402024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1312402023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba97045275a905243b14be6cec23d1db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cinemachineMultiChannelPerlin: {fileID: 91045326}
+  noiseProfile: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
+  screenShakeDuration: 0.3
+  maxDistance: 90
+  minDistance: 10
+  maxAmplitude: 5
+  maxFrequency: 5
 --- !u!1 &1323112162
 GameObject:
   m_ObjectHideFlags: 0
@@ -8012,16 +8643,47 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4959107606612291164, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+      propertyPath: screenShaker
+      value: 
+      objectReference: {fileID: 1373286269}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 643677464676224115, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1373286269}
   m_SourcePrefab: {fileID: 100100000, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
 --- !u!4 &1373286267 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 529051730854651358, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
   m_PrefabInstance: {fileID: 1373286266}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1373286268 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 643677464676224115, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+  m_PrefabInstance: {fileID: 1373286266}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1373286269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1373286268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba97045275a905243b14be6cec23d1db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cinemachineMultiChannelPerlin: {fileID: 91045326}
+  noiseProfile: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
+  screenShakeDuration: 0.3
+  maxDistance: 90
+  minDistance: 10
+  maxAmplitude: 5
+  maxFrequency: 5
 --- !u!1 &1379647866
 GameObject:
   m_ObjectHideFlags: 0
@@ -8356,16 +9018,47 @@ PrefabInstance:
       propertyPath: m_Name
       value: Explosive Barrel_10
       objectReference: {fileID: 0}
+    - target: {fileID: 4959107606612291164, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+      propertyPath: screenShaker
+      value: 
+      objectReference: {fileID: 1432538949}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 643677464676224115, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1432538949}
   m_SourcePrefab: {fileID: 100100000, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
 --- !u!4 &1432538947 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 529051730854651358, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
   m_PrefabInstance: {fileID: 1432538946}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1432538948 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 643677464676224115, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+  m_PrefabInstance: {fileID: 1432538946}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1432538949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1432538948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba97045275a905243b14be6cec23d1db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cinemachineMultiChannelPerlin: {fileID: 91045326}
+  noiseProfile: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
+  screenShakeDuration: 0.3
+  maxDistance: 90
+  minDistance: 10
+  maxAmplitude: 5
+  maxFrequency: 5
 --- !u!1001 &1436599768
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8776,16 +9469,47 @@ PrefabInstance:
       propertyPath: m_Name
       value: Explosive Barrel_6
       objectReference: {fileID: 0}
+    - target: {fileID: 4959107606612291164, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+      propertyPath: screenShaker
+      value: 
+      objectReference: {fileID: 1568417296}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 643677464676224115, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1568417296}
   m_SourcePrefab: {fileID: 100100000, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
 --- !u!4 &1568417294 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 529051730854651358, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
   m_PrefabInstance: {fileID: 1568417293}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1568417295 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 643677464676224115, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+  m_PrefabInstance: {fileID: 1568417293}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1568417296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1568417295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba97045275a905243b14be6cec23d1db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cinemachineMultiChannelPerlin: {fileID: 91045326}
+  noiseProfile: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
+  screenShakeDuration: 0.3
+  maxDistance: 90
+  minDistance: 10
+  maxAmplitude: 5
+  maxFrequency: 5
 --- !u!1001 &1591510190
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8838,16 +9562,47 @@ PrefabInstance:
       propertyPath: m_Name
       value: Explosive Barrel
       objectReference: {fileID: 0}
+    - target: {fileID: 4959107606612291164, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+      propertyPath: screenShaker
+      value: 
+      objectReference: {fileID: 1591510193}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 643677464676224115, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1591510193}
   m_SourcePrefab: {fileID: 100100000, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
 --- !u!4 &1591510191 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 529051730854651358, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
   m_PrefabInstance: {fileID: 1591510190}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1591510192 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 643677464676224115, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+  m_PrefabInstance: {fileID: 1591510190}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1591510193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1591510192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba97045275a905243b14be6cec23d1db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cinemachineMultiChannelPerlin: {fileID: 91045326}
+  noiseProfile: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
+  screenShakeDuration: 0.3
+  maxDistance: 90
+  minDistance: 10
+  maxAmplitude: 5
+  maxFrequency: 5
 --- !u!1001 &1593193034
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9137,16 +9892,47 @@ PrefabInstance:
       propertyPath: m_Name
       value: Explosive Barrel_15
       objectReference: {fileID: 0}
+    - target: {fileID: 4959107606612291164, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+      propertyPath: screenShaker
+      value: 
+      objectReference: {fileID: 1624440548}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 643677464676224115, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1624440548}
   m_SourcePrefab: {fileID: 100100000, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
 --- !u!4 &1624440546 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 529051730854651358, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
   m_PrefabInstance: {fileID: 1624440545}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1624440547 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 643677464676224115, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+  m_PrefabInstance: {fileID: 1624440545}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1624440548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1624440547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba97045275a905243b14be6cec23d1db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cinemachineMultiChannelPerlin: {fileID: 91045326}
+  noiseProfile: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
+  screenShakeDuration: 0.3
+  maxDistance: 90
+  minDistance: 10
+  maxAmplitude: 5
+  maxFrequency: 5
 --- !u!1 &1672044559
 GameObject:
   m_ObjectHideFlags: 0
@@ -9387,16 +10173,47 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4959107606612291164, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+      propertyPath: screenShaker
+      value: 
+      objectReference: {fileID: 1772015333}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 643677464676224115, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1772015333}
   m_SourcePrefab: {fileID: 100100000, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
 --- !u!4 &1772015331 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 529051730854651358, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
   m_PrefabInstance: {fileID: 1772015330}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1772015332 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 643677464676224115, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+  m_PrefabInstance: {fileID: 1772015330}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1772015333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1772015332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba97045275a905243b14be6cec23d1db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cinemachineMultiChannelPerlin: {fileID: 91045326}
+  noiseProfile: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
+  screenShakeDuration: 0.3
+  maxDistance: 90
+  minDistance: 10
+  maxAmplitude: 5
+  maxFrequency: 5
 --- !u!1001 &1783225850
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9584,16 +10401,47 @@ PrefabInstance:
       propertyPath: m_Name
       value: Explosive Barrel_4
       objectReference: {fileID: 0}
+    - target: {fileID: 4959107606612291164, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+      propertyPath: screenShaker
+      value: 
+      objectReference: {fileID: 1802050410}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 643677464676224115, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1802050410}
   m_SourcePrefab: {fileID: 100100000, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
 --- !u!4 &1802050408 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 529051730854651358, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
   m_PrefabInstance: {fileID: 1802050407}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1802050409 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 643677464676224115, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+  m_PrefabInstance: {fileID: 1802050407}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1802050410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1802050409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba97045275a905243b14be6cec23d1db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cinemachineMultiChannelPerlin: {fileID: 91045326}
+  noiseProfile: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
+  screenShakeDuration: 0.3
+  maxDistance: 90
+  minDistance: 10
+  maxAmplitude: 5
+  maxFrequency: 5
 --- !u!1001 &1812217956
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11246,16 +12094,47 @@ PrefabInstance:
       propertyPath: m_Name
       value: Explosive Barrel_2
       objectReference: {fileID: 0}
+    - target: {fileID: 4959107606612291164, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+      propertyPath: screenShaker
+      value: 
+      objectReference: {fileID: 1980623491}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 643677464676224115, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1980623491}
   m_SourcePrefab: {fileID: 100100000, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
 --- !u!4 &1980623489 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 529051730854651358, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
   m_PrefabInstance: {fileID: 1980623488}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1980623490 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 643677464676224115, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+  m_PrefabInstance: {fileID: 1980623488}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1980623491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1980623490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba97045275a905243b14be6cec23d1db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cinemachineMultiChannelPerlin: {fileID: 91045326}
+  noiseProfile: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
+  screenShakeDuration: 0.3
+  maxDistance: 90
+  minDistance: 10
+  maxAmplitude: 5
+  maxFrequency: 5
 --- !u!1001 &1996355999
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12585,16 +13464,47 @@ PrefabInstance:
       propertyPath: m_Name
       value: Explosive Barrel_1
       objectReference: {fileID: 0}
+    - target: {fileID: 4959107606612291164, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+      propertyPath: screenShaker
+      value: 
+      objectReference: {fileID: 2102204998}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 643677464676224115, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2102204998}
   m_SourcePrefab: {fileID: 100100000, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
 --- !u!4 &2102204996 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 529051730854651358, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
   m_PrefabInstance: {fileID: 2102204995}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2102204997 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 643677464676224115, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+  m_PrefabInstance: {fileID: 2102204995}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2102204998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2102204997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba97045275a905243b14be6cec23d1db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cinemachineMultiChannelPerlin: {fileID: 91045326}
+  noiseProfile: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
+  screenShakeDuration: 0.3
+  maxDistance: 90
+  minDistance: 10
+  maxAmplitude: 5
+  maxFrequency: 5
 --- !u!1 &2102546248
 GameObject:
   m_ObjectHideFlags: 0
@@ -12838,16 +13748,47 @@ PrefabInstance:
       propertyPath: m_Name
       value: Explosive Barrel_26
       objectReference: {fileID: 0}
+    - target: {fileID: 4959107606612291164, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+      propertyPath: screenShaker
+      value: 
+      objectReference: {fileID: 2137224654}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 643677464676224115, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2137224654}
   m_SourcePrefab: {fileID: 100100000, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
 --- !u!4 &2137224652 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 529051730854651358, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
   m_PrefabInstance: {fileID: 2137224651}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2137224653 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 643677464676224115, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+  m_PrefabInstance: {fileID: 2137224651}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2137224654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2137224653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba97045275a905243b14be6cec23d1db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cinemachineMultiChannelPerlin: {fileID: 91045326}
+  noiseProfile: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
+  screenShakeDuration: 0.3
+  maxDistance: 90
+  minDistance: 10
+  maxAmplitude: 5
+  maxFrequency: 5
 --- !u!1001 &2138876818
 PrefabInstance:
   m_ObjectHideFlags: 0

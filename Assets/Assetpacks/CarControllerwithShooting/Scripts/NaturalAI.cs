@@ -1,4 +1,5 @@
 using UnityEngine;
+using Voidwalker;
 
 namespace CarControllerwithShooting
 {
@@ -12,6 +13,8 @@ namespace CarControllerwithShooting
 
         public GameObject ExplosionEffect;
         private GameObject particleParent;
+
+        public ScreenShaker screenShaker;
 
         private void Start()
         {
@@ -78,6 +81,11 @@ namespace CarControllerwithShooting
             if (IsExplosive || ExplosionEffect != null)
             {
                 Instantiate(ExplosionEffect, gameObject.transform.position, Quaternion.identity);
+
+                if (screenShaker != null)
+                {
+                    screenShaker.StartShake(gameObject.transform.position);
+                }
             }
 
 

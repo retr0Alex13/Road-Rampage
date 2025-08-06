@@ -312,6 +312,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3607131848594861169, guid: 54f93a021402e4c0a937b52efa06fb09, type: 3}
   m_PrefabInstance: {fileID: 36699277}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &273248886 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 643677464676224115, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+  m_PrefabInstance: {fileID: 1070477537}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &311143494 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2456340012754175374, guid: 414e8da994305fe45ba3b91f7781c519, type: 3}
@@ -1559,10 +1564,17 @@ PrefabInstance:
       propertyPath: Health
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4959107606612291164, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+      propertyPath: screenShaker
+      value: 
+      objectReference: {fileID: 1998193092}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 643677464676224115, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1998193092}
   m_SourcePrefab: {fileID: 100100000, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
 --- !u!4 &931347700 stripped
 Transform:
@@ -1707,16 +1719,42 @@ PrefabInstance:
       propertyPath: Health
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4959107606612291164, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+      propertyPath: screenShaker
+      value: 
+      objectReference: {fileID: 2062977009}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 643677464676224115, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1070477545}
   m_SourcePrefab: {fileID: 100100000, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
 --- !u!4 &1070477538 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 529051730854651358, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
   m_PrefabInstance: {fileID: 1070477537}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1070477545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 273248886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba97045275a905243b14be6cec23d1db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cinemachineMultiChannelPerlin: {fileID: 1390548084}
+  noiseProfile: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
+  screenShakeDuration: 0.3
+  maxDistance: 90
+  minDistance: 10
+  maxAmplitude: 5
+  maxFrequency: 5
 --- !u!1001 &1095110132
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2024,6 +2062,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1382557170}
   m_Mesh: {fileID: 4300000, guid: 9a23f38b79232426f8b7c38eb9aefbf1, type: 3}
+--- !u!114 &1390548084 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4026783243441619739, guid: 558180c27ef6cbd4fad4d9ff9a381973, type: 3}
+  m_PrefabInstance: {fileID: 3118000691556309387}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68bb026fafb42b14791938953eaace77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1427983945
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2150,10 +2199,17 @@ PrefabInstance:
       propertyPath: Health
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4959107606612291164, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+      propertyPath: screenShaker
+      value: 
+      objectReference: {fileID: 2062977009}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 643677464676224115, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2062977009}
   m_SourcePrefab: {fileID: 100100000, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
 --- !u!4 &1591510191 stripped
 Transform:
@@ -2906,6 +2962,30 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3fcc5f04d71fcd241807763d91fd5139, type: 3}
+--- !u!1 &1998193085 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 643677464676224115, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+  m_PrefabInstance: {fileID: 931347699}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1998193092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1998193085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba97045275a905243b14be6cec23d1db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cinemachineMultiChannelPerlin: {fileID: 1390548084}
+  noiseProfile: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
+  screenShakeDuration: 0.3
+  maxDistance: 90
+  minDistance: 10
+  maxAmplitude: 5
+  maxFrequency: 5
 --- !u!1 &2015397897
 GameObject:
   m_ObjectHideFlags: 0
@@ -3046,6 +3126,30 @@ Transform:
   - {fileID: 561464614}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2062977002 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 643677464676224115, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+  m_PrefabInstance: {fileID: 1591510190}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2062977009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2062977002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba97045275a905243b14be6cec23d1db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cinemachineMultiChannelPerlin: {fileID: 1390548084}
+  noiseProfile: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
+  screenShakeDuration: 0.3
+  maxDistance: 90
+  minDistance: 10
+  maxAmplitude: 5
+  maxFrequency: 5
 --- !u!1 &2072571896
 GameObject:
   m_ObjectHideFlags: 0
@@ -3398,6 +3502,22 @@ PrefabInstance:
     - target: {fileID: 928157376860947617, guid: 558180c27ef6cbd4fad4d9ff9a381973, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3982288130189612366, guid: 558180c27ef6cbd4fad4d9ff9a381973, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.9400005
+      objectReference: {fileID: 0}
+    - target: {fileID: 3982288130189612366, guid: 558180c27ef6cbd4fad4d9ff9a381973, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7461692799315374885, guid: 558180c27ef6cbd4fad4d9ff9a381973, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.9400005
+      objectReference: {fileID: 0}
+    - target: {fileID: 7461692799315374885, guid: 558180c27ef6cbd4fad4d9ff9a381973, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -7
       objectReference: {fileID: 0}
     - target: {fileID: 7587683871107138304, guid: 558180c27ef6cbd4fad4d9ff9a381973, type: 3}
       propertyPath: m_Name

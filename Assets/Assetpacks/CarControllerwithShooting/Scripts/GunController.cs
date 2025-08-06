@@ -1,4 +1,5 @@
 using UnityEngine;
+using Voidwalker;
 
 namespace CarControllerwithShooting
 {
@@ -27,6 +28,8 @@ namespace CarControllerwithShooting
 
         public AudioSource AudioSource_Gun;
         public static GunController Instance;
+
+        public ScreenShaker screenShaker;
 
         public GameObject Weapon_MachineGun;
         public GameObject Weapon_MissileLeft;
@@ -66,6 +69,7 @@ namespace CarControllerwithShooting
                 GameObject newMissile = Instantiate(Bullet_Missile, FiringPoints_Missiles[Missile_Firing_Point_Index % 2].position, Quaternion.identity);
                 newMissile.transform.eulerAngles = FiringPoints_Missiles[Missile_Firing_Point_Index % 2].eulerAngles;
                 newMissile.GetComponentInChildren<Rigidbody>().AddForce(FiringPoints_Missiles[Missile_Firing_Point_Index % 2].transform.forward * 220, ForceMode.Impulse);
+                newMissile.GetComponent<MissileScript>().screenShaker = screenShaker;
                 Particle_Missile_Firing_Explosion[Missile_Firing_Point_Index % 2].Play();
             }
         }
