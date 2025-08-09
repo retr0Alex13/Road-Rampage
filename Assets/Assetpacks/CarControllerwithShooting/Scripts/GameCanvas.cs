@@ -166,6 +166,8 @@ namespace CarControllerwithShooting
 
         public void UnpauseGame()
         {
+            if (Panel_Win.activeSelf || Panel_GameOver.activeSelf) return;
+
             if (CarSystemManager.Instance.controllerType == ControllerType.KeyboardMouse)
             {
                 Cursor.lockState = CursorLockMode.Locked;
