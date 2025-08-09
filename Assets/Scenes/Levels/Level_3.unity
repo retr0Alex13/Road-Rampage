@@ -366,6 +366,10 @@ PrefabInstance:
       value: Explosive Barrel_4
       objectReference: {fileID: 0}
     - target: {fileID: 4959107606612291164, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+      propertyPath: Health
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4959107606612291164, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
       propertyPath: screenShaker
       value: 
       objectReference: {fileID: 26714489}
@@ -1338,6 +1342,10 @@ PrefabInstance:
       value: Explosive Barrel_1
       objectReference: {fileID: 0}
     - target: {fileID: 4959107606612291164, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+      propertyPath: Health
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4959107606612291164, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
       propertyPath: screenShaker
       value: 
       objectReference: {fileID: 311411539}
@@ -2202,6 +2210,10 @@ PrefabInstance:
     - target: {fileID: 643677464676224115, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
       propertyPath: m_Name
       value: Explosive Barrel_7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4959107606612291164, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+      propertyPath: Health
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4959107606612291164, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
       propertyPath: screenShaker
@@ -5463,6 +5475,10 @@ PrefabInstance:
       value: Explosive Barrel_3
       objectReference: {fileID: 0}
     - target: {fileID: 4959107606612291164, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+      propertyPath: Health
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4959107606612291164, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
       propertyPath: screenShaker
       value: 
       objectReference: {fileID: 931347702}
@@ -6052,6 +6068,10 @@ PrefabInstance:
     - target: {fileID: 643677464676224115, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
       propertyPath: m_Name
       value: Explosive Barrel_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4959107606612291164, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+      propertyPath: Health
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4959107606612291164, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
       propertyPath: screenShaker
@@ -7315,6 +7335,10 @@ PrefabInstance:
       value: Explosive Barrel_6
       objectReference: {fileID: 0}
     - target: {fileID: 4959107606612291164, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+      propertyPath: Health
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4959107606612291164, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
       propertyPath: screenShaker
       value: 
       objectReference: {fileID: 1421725403}
@@ -7812,6 +7836,10 @@ PrefabInstance:
       value: Explosive Barrel_5
       objectReference: {fileID: 0}
     - target: {fileID: 4959107606612291164, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+      propertyPath: Health
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4959107606612291164, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
       propertyPath: screenShaker
       value: 
       objectReference: {fileID: 1490925008}
@@ -8195,6 +8223,10 @@ PrefabInstance:
     - target: {fileID: 643677464676224115, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
       propertyPath: m_Name
       value: Explosive Barrel
+      objectReference: {fileID: 0}
+    - target: {fileID: 4959107606612291164, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
+      propertyPath: Health
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4959107606612291164, guid: c650d077cf43daf49a77b08a785d562f, type: 3}
       propertyPath: screenShaker
