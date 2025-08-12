@@ -32,8 +32,8 @@ namespace CarControllerwithShooting
             }
             if (isMobile)
             {
-                Screen.autorotateToLandscapeLeft = true;
-                Screen.orientation = ScreenOrientation.LandscapeLeft;
+                //Screen.autorotateToLandscapeLeft = true;
+                //Screen.orientation = ScreenOrientation.LandscapeLeft;
 
                 controllerType = ControllerType.Mobile;
             }
