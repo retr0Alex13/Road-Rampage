@@ -40,8 +40,8 @@ namespace CarControllerwithShooting
             if (controllerType == ControllerType.KeyboardMouse)
             {
                 GameCanvas.Instance.Configure_For_PCConsole();
-                Cursor.visible = false;
-                Cursor.lockState = CursorLockMode.Locked;
+                //Cursor.visible = false;
+                //Cursor.lockState = CursorLockMode.Locked;
             }
             else if (controllerType == ControllerType.Mobile)
             {
