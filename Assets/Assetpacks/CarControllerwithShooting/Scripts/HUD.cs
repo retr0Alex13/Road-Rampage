@@ -18,7 +18,7 @@ namespace CarControllerwithShooting
         private void Start()
         {
             _speedType = " KPH";
-            Cursor.lockState = CursorLockMode.Locked;
+            //Cursor.lockState = CursorLockMode.Locked;
         }
 
         private void LateUpdate()

@@ -170,8 +170,8 @@ namespace CarControllerwithShooting
 
             if (CarSystemManager.Instance.controllerType == ControllerType.KeyboardMouse)
             {
-                Cursor.lockState = CursorLockMode.Locked;
-                Cursor.visible = false;
+                //Cursor.lockState = CursorLockMode.Locked;
+                //Cursor.visible = false;
             }
             Time.timeScale = 1;
             isPaused = false;
